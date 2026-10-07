@@ -43,7 +43,7 @@ const List = ({ icon, items }) => {
           >
             SEE ALL
             <img
-              src={icon.publicURL}
+              src={icon.src}
               alt="arrow down icon"
               loading="lazy"
               className={styles.icon}
@@ -53,7 +53,7 @@ const List = ({ icon, items }) => {
           <button className={styles.button} onClick={handleSetNumberOfRendered}>
             INSPIRE MORE
             <img
-              src={icon.publicURL}
+              src={icon.src}
               alt="arrow down icon"
               loading="lazy"
               className={styles.icon}

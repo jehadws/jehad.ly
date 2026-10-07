@@ -32,7 +32,7 @@ const List = () => {
         return (
           <li key={title} className={styles.item}>
             <img
-              src={image.publicURL}
+              src={image.src}
               alt="industries item icon"
               loading="lazy"
               draggable="false"

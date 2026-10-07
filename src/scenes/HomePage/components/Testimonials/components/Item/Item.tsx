@@ -21,14 +21,14 @@ const Item = ({ author, generalLogo, rating, stars, text }: props) => {
     <div className={`${styles.container}`}>
       <div className={styles.rating}>
         <span className={styles.mark}>{rating}</span>
-        <img src={stars.publicURL} alt="stars" className={styles.stars} />
+        <img src={stars.src} alt="stars" className={styles.stars} />
       </div>
       <div className={styles.review}>
         <h1 className={styles.text}>{text}</h1>
       </div>
       <div className={styles.author}>
         <img
-          src={generalLogo.publicURL}
+          src={generalLogo.src}
           alt="general logotype"
           loading="lazy"
           className={styles.generalLogo}

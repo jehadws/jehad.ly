@@ -31,7 +31,7 @@ const Switcher = ({ items }) => {
                   >
                     <div className={styles.tabContentIcon}>
                       <img
-                        src={image.publicURL}
+                        src={image.src}
                         alt="technologies item icon"
                         loading="lazy"
                       />

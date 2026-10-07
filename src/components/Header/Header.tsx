@@ -39,7 +39,7 @@ const Header = ({
       <div className={barStyles}>
         <div className={styles.logotype}>
           <Link to="/" id="logoHomePage" title={"JS Station logo"}>
-            <ReactSVG src={logotype.publicURL} title={"JS Station logo"} />
+            <ReactSVG src={logotype.src} title={"JS Station logo"} />
           </Link>
         </div>
 

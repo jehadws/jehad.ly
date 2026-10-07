@@ -1,6 +1,6 @@
 # Plan 04 — Assets and hooks
 
-**Status:** ⬜ TODO  
+**Status:** ✅ DONE  
 **Depends on:** Plans 01 + 03
 
 ## Goal
@@ -129,8 +129,8 @@ export { default as useResize } from './useResize';
 
 ## Verify
 
-- [ ] `src/constants/images/` has one module per row above, and every key the old hooks returned exists
-- [ ] `grep -rn "useStaticQuery\|graphql" src` → nothing
-- [ ] `grep -rn "\.publicURL" src` → nothing
-- [ ] No `window`/`document` access during render in any hook (only inside effects or handlers)
-- [ ] The list of files still importing `hooks/queries` is written down for Plan 07
+- [x] `src/constants/images/` has one module per row above, and every key the old hooks returned exists
+- [x] `grep -rn "useStaticQuery\|graphql" src` → nothing
+- [x] `grep -rn "\.publicURL" src` → nothing
+- [x] No `window`/`document` access during render in any hook (only inside effects or handlers)
+- [x] The list of files still importing `hooks/queries` is written down for Plan 07

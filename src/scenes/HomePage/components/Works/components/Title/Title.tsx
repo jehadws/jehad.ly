@@ -38,13 +38,13 @@ const Title = ({ icon, signature }: Props) => {
         rel="noopener noreferrer"
       >
         <img
-          src={signature.publicURL}
+          src={signature.src}
           alt="applications mobile illustrations websites"
           loading="lazy"
           className={styles.icon}
         />
         <img
-          src={icon.publicURL}
+          src={icon.src}
           alt="dribbble logotype"
           loading="lazy"
           // className={styles.svg}

@@ -16,7 +16,7 @@ const List = ({ items }) => {
                   <li key={index} className={styles.subitem}>
                     <div className={styles.icon}>
                       <img
-                        src={image.publicURL}
+                        src={image.src}
                         alt="technologies item icon"
                         loading="lazy"
                       />

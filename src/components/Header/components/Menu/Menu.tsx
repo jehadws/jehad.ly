@@ -54,11 +54,11 @@ const Menu = () => {
                 <div className={styles.circle} data-circle={index + 1}></div>
                 <div className={styles.title}>{title}</div>
                 <div
-                  style={{ backgroundImage: `url('${stars.publicURL}')` }}
+                  style={{ backgroundImage: `url('${stars.src}')` }}
                   className={styles.stars}
                 ></div>
                 <div
-                  style={{ backgroundImage: `url('${icon.publicURL}')` }}
+                  style={{ backgroundImage: `url('${icon.src}')` }}
                   className={styles.icon}
                   data-icon={index + 1}
                 ></div>

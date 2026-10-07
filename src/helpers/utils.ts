@@ -4,17 +4,25 @@ function isValidEmail(email: string) {
 }
 
 // this function takes an element on at the time of finding which callback will be returned
-export function scrollHandler(ref: { getBoundingClientRect: () => any; }, callback: (arg0: boolean) => void) {
+export function scrollHandler(
+  ref: { getBoundingClientRect?: () => DOMRect } | null | undefined,
+  callback: (arg0: boolean) => void
+) {
   return function () {
+    if (!ref || typeof ref.getBoundingClientRect !== 'function') return;
     const pos = ref.getBoundingClientRect();
-    if (pos.y <= 0 && -pos.y < pos.height) {
+    if (pos && pos.y <= 0 && -pos.y < pos.height) {
       return callback(true);
     }
     callback(false);
   };
 }
 
-export function useEffectScroll(ref: { current: any; }, func: any) {
+export function useEffectScroll(
+  ref: { current: any } | null | undefined,
+  func: (arg0: boolean) => void
+) {
+  if (typeof window === 'undefined' || !ref) return () => {};
   const handler = scrollHandler(ref.current, func);
   window.addEventListener('scroll', handler);
   return () => window.removeEventListener('scroll', handler);

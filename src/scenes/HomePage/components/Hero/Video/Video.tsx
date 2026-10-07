@@ -11,9 +11,9 @@ const Video = () => {
       <div className={styles.folderWrapper}>
         <div
           className={styles.folder}
-          // style={{ backgroundImage: `url(${imageUrl.publicURL})` }}
+          // style={{ backgroundImage: `url(${imageUrl.src})` }}
         >
-          <video autoPlay muted loop src={video.publicURL}></video>
+          <video autoPlay muted loop src={video.src}></video>
         </div>
       </div>
     </div>

@@ -30,7 +30,7 @@ const Info = ({ clutchLaurel, dribbbleLaurel, upworkLaurel }) => {
       {items.map(({ icon, textStrings, classes, iconAlt }) => {
         return (
           <div key={iconAlt} className={`${styles.item} ${classes}`}>
-            <img className={styles.images} src={icon?.publicURL} alt={iconAlt} />
+            <img className={styles.images} src={icon?.src} alt={iconAlt} />
             <span className={styles.text}>{textStrings}</span>
           </div>
         );

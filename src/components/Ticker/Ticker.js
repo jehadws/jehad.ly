@@ -162,14 +162,14 @@ const Ticker = ({ images, arrowLeft, arrowRight }) => {
       </a.ul>
       <div
         data-direction={DIRECTIONS.FORWARD}
-        style={{ cursor: `url('${arrowLeft.publicURL}'), auto` }}
+        style={{ cursor: `url('${arrowLeft.src}'), auto` }}
         className={styles.asideLeft}
         onMouseEnter={run}
         onMouseLeave={stop}
       />
       <div
         data-direction={DIRECTIONS.BACKWARD}
-        style={{ cursor: `url('${arrowRight.publicURL}'), auto` }}
+        style={{ cursor: `url('${arrowRight.src}'), auto` }}
         className={styles.asideRight}
         onMouseEnter={run}
         onMouseLeave={stop}

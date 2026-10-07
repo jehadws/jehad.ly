@@ -68,7 +68,7 @@ const ProjectScene = ({
           {technologies.map(({ name, icon }, index) => (
             <li key={index} className={styles.technologiesItem}>
               <img
-                src={icon.publicURL}
+                src={icon.src}
                 alt="technologies item icon"
                 loading="lazy"
                 className={styles.technologyIcon}
