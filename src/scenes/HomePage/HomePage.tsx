@@ -1,5 +1,4 @@
 import React from "react";
-// import MailUs from "@scenes/MailUs";
 import Testimonials from "./components/Testimonials";
 import Works from "./components/Works";
 
@@ -9,7 +8,6 @@ import "swiper/css";
 import styles from "./HomePage.module.scss";
 import WhatWeDo from "./components/WhatWeDo";
 import Hero from "./components/Hero";
-import Posts from "./components/Posts";
 import Projects from "@scenes/HomeProjects";
 
 type props = {
@@ -30,11 +28,6 @@ const HomePage = ({ animation }: props) => {
         <Projects title="Projects" navigation={true} />
       </div>
       <Testimonials />
-      {/* <Gallery /> */}
-      <div className="pageWrapper">
-        <Posts />
-      </div>
-      {/* <MailUs /> */}
     </div>
   );
 };

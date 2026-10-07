@@ -65,16 +65,6 @@ const Header = ({
           <li>
             {" "}
             <Link
-              to="/blog/"
-              className={styles.contact}
-              data-status={menuStatus}
-            >
-              blog
-            </Link>
-          </li>
-          <li>
-            {" "}
-            <Link
               to="/contacts/"
               className={styles.contact}
               data-status={menuStatus}

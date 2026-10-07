@@ -7,8 +7,6 @@ import styles from "./Menu.module.scss";
 
 const Menu = () => {
   const {
-    blogIcon,
-    blogStars,
     contactsIcon,
     contactsStars,
     portfolioIcon,
@@ -29,12 +27,6 @@ const Menu = () => {
       link: "/services/",
       icon: servicesIcon,
       stars: servicesStars,
-    },
-    {
-      title: "Blog",
-      link: "/blog/",
-      icon: blogIcon,
-      stars: blogStars,
     },
     {
       title: "Contacts",
