@@ -1,17 +1,10 @@
-import React from "react";
-import { MenuContext } from "../../contexts";
-import { useIsOpened } from "../../hooks";
+'use client';
 
-type MenuContextType = {
-  children: React.ReactNode;
-};
+import type { ReactNode } from 'react';
+import { MenuContext } from '@contexts/index';
+import { useIsOpened } from '@hooks/index';
 
-const Providers = ({ children }: MenuContextType) => {
+export default function Providers({ children }: { children: ReactNode }) {
   const menuState = useIsOpened();
-
-  return (
-    <MenuContext.Provider value={menuState}>{children}</MenuContext.Provider>
-  );
-};
-
-export default Providers;
+  return <MenuContext.Provider value={menuState}>{children}</MenuContext.Provider>;
+}

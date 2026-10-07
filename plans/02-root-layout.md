@@ -1,6 +1,6 @@
 # Plan 02 — Root layout, metadata, fonts, providers
 
-**Status:** ⬜ TODO  
+**Status:** ✅ DONE  
 **Depends on:** Plan 01
 
 ## Goal

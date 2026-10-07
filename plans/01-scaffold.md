@@ -1,6 +1,6 @@
 # Plan 01 — Scaffold, staging, dependencies, codemods
 
-**Status:** 🟡 IN PROGRESS
+**Status:** ✅ DONE
 
 ## Goal
 

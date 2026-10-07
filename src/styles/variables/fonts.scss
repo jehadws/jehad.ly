@@ -1,4 +1,6 @@
-$font-sofia-pro-soft: sofia-pro-soft, sans-serif;
-$font-sofia-pro: sofia-pro, sans-serif;
-$font-gramatika: "Gramatika", sans-serif;
-$font-cairo: "Cairo", sans-serif;
+// These reference the CSS custom properties injected by next/font (src/styles/fonts.ts).
+// next/font applies --font-* variables to <html> via className in src/app/layout.tsx.
+$font-sofia-pro:      var(--font-sofia-pro), sans-serif;
+$font-sofia-pro-soft: var(--font-sofia-pro), sans-serif; // ⚠ Plan 09: give Soft its own files & variable if it's a separate family
+$font-gramatika:      var(--font-gramatika), sans-serif;
+$font-cairo:          var(--font-cairo), sans-serif;
