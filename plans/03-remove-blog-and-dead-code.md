@@ -1,6 +1,6 @@
 # Plan 03 — Remove the blog and dead code
 
-**Status:** ⬜ TODO  
+**Status:** ✅ DONE  
 **Depends on:** Plan 01
 
 ## Goal
@@ -57,6 +57,6 @@ The old blog images (`blogIcon`, `blogStars`, post previews) stay in `src/assets
 
 ## Verify
 
-- [ ] `grep -rniE "blog" src` shows only intentional leftovers (asset file names are fine)
-- [ ] Nothing imports `BlogPage`, `PostThumbnail`, `Posts`, `Gallery` or `MailUs`
-- [ ] `tsc` error count is lower than your Plan 01 baseline
+- [x] `grep -rniE "blog" src` shows only intentional leftovers (asset file names are fine)
+- [x] Nothing imports `BlogPage`, `PostThumbnail`, `Posts`, `Gallery` or `MailUs`
+- [x] `tsc` error count is lower than your Plan 01 baseline
