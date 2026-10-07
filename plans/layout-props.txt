@@ -1,0 +1,9 @@
+src/pages/blog.tsx:13:      <Layout>
+src/pages/contacts.tsx:11:      <Layout>
+src/pages/error.tsx:11:      <Layout>
+src/pages/index.tsx:25:        <Layout>
+src/pages/portfolio.tsx:12:      <Layout>
+src/pages/services.tsx:11:      <Layout>
+src/pages/thanks.tsx:13:      <Layout>
+src/templates/BlogPost/BlogPost.tsx:54:      <Layout isGlow headerIsWhite>
+src/templates/Project/Project.tsx:31:      <Layout footerIsHide={true}>

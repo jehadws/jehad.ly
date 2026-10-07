@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 import { useSiteMetadata } from "@hooks/queries";
 // @ts-ignore
-import * as styles from "./Block.module.scss";
+import styles from "./Block.module.scss";
 
 const Block = ({ message }) => {
   const metadata = useSiteMetadata();

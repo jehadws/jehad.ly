@@ -5,7 +5,7 @@ import Projects from '@scenes/Projects';
 import Clients from './components/Clients';
 import Works from './components/Works';
 // @ts-ignore
-import * as styles from './PortfolioPage.module.scss';
+import styles from './PortfolioPage.module.scss';
 
 const PortfolioPage = () => {
   return (

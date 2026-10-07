@@ -2,7 +2,7 @@ import React from "react";
 
 import PageMessage from "@components/PageMessage";
 // @ts-ignore
-import * as styles from "./ThanksPage.module.scss";
+import styles from "./ThanksPage.module.scss";
 
 const ThanksPage = () => {
   const title = "Thank you for your request";

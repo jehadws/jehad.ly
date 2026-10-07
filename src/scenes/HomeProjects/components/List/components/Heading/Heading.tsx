@@ -5,7 +5,7 @@ type Props = {
   subTitle: string;
 };
 // @ts-ignore
-import * as styles from "./Heading.module.scss";
+import styles from "./Heading.module.scss";
 
 const Heading = ({ title, subTitle }: Props) => {
   return (

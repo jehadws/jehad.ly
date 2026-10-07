@@ -2,7 +2,7 @@ import React, { Fragment } from "react";
 import PropTypes from "prop-types";
 
 // @ts-ignore
-import * as styles from "./ProjectScene.module.scss";
+import styles from "./ProjectScene.module.scss";
 import { GatsbyImage } from "gatsby-plugin-image";
 // import { StaticImage } from "gatsby-plugin-image";
 import SlideHover from "@components/SlideHover";

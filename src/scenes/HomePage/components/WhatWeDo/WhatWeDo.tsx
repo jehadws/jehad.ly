@@ -1,6 +1,6 @@
 import React from "react";
 // @ts-ignore
-import * as styles from "./WhatWeDo.module.scss";
+import styles from "./WhatWeDo.module.scss";
 
 const WhatWeDo = () => {
   return (

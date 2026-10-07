@@ -5,7 +5,7 @@ import Item from "./components/Item";
 import SlideHover from "@components/SlideHover";
 // import { useWordpressPosts } from "@hooks/queries";
 // @ts-ignore
-import * as styles from "./Previews.module.scss";
+import styles from "./Previews.module.scss";
 import { useBlogAssets } from "@hooks/queries";
 
 const Previews = () => {

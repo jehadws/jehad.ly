@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useSpring, animated } from "react-spring";
 import { springDebounce } from "../../helpers";
 //@ts-ignore
-import * as styles from "./Styles.module.scss";
+import styles from "./Styles.module.scss";
 
 type Props = {
   children: React.ReactNode;

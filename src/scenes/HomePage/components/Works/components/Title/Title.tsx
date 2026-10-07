@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 // @ts-ignore
-import * as styles from "./Title.module.scss";
+import styles from "./Title.module.scss";
 
 type Props = {
   icon: {

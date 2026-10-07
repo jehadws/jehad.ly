@@ -4,7 +4,7 @@ import { useProjectsAssets } from "../../hooks/queries";
 import List from "./components/List";
 import Others from "./components/Others";
 // @ts-ignore
-import * as styles from "./Projects.module.scss";
+import styles from "./Projects.module.scss";
 
 type props = {
   title: string;

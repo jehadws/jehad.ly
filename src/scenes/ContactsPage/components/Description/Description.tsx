@@ -4,7 +4,7 @@ import GradientText from "@components/GradientText";
 import SlideHover from "@components/SlideHover";
 
 // @ts-ignore
-import * as styles from "./Description.module.scss";
+import styles from "./Description.module.scss";
 
 const Description = () => {
   const data = useSiteMetadata();

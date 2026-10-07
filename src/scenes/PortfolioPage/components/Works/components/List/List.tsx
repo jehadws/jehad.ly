@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import Img from 'gatsby-image';
 // @ts-ignore
-import * as styles from './List.module.scss';
+import styles from './List.module.scss';
 
 const List = ({ icon, items }) => {
   const STEP_VALUE = 8;

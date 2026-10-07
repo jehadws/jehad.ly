@@ -7,7 +7,7 @@ import Arrow from "./components/Arrow";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 // @ts-ignore
-import * as styles from "./Slider.module.scss";
+import styles from "./Slider.module.scss";
 
 const Slider = ({ children, settings, instance }) => {
   const defaultSettings = {

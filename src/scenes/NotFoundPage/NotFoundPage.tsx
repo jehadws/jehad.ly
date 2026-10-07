@@ -2,7 +2,7 @@ import React from 'react';
 
 import Title from './components/Title';
 
-import * as styles from './NotFoundPage.module.scss';
+import styles from './NotFoundPage.module.scss';
 
 const NotFoundPage = () => {
   return (

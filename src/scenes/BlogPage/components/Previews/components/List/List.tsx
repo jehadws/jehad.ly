@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import PostThumbnail from "@scenes/PostThumbnail";
 
 // @ts-ignore
-import * as styles from "./List.module.scss";
+import styles from "./List.module.scss";
 
 const STEP_VALUE = 6;
 

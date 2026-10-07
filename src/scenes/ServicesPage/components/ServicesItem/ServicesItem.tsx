@@ -5,7 +5,7 @@ import Block from "./components/Block";
 import List from "./components/List";
 
 // @ts-ignore
-import * as styles from "./ServicesItem.module.scss";
+import styles from "./ServicesItem.module.scss";
 
 const ServicesItem = ({ items, message }) => {
   return (

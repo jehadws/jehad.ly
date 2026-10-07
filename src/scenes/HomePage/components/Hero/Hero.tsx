@@ -2,7 +2,7 @@ import React from "react";
 import Folder from "./Folder";
 
 // @ts-ignore
-import * as styles from "./Hero.module.scss";
+import styles from "./Hero.module.scss";
 import Video from "./Video";
 
 const Hero = () => {

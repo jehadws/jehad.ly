@@ -3,7 +3,7 @@ import React from "react";
 import { useServicesDesignAssets } from "@hooks/queries";
 import ServicesItem from "../ServicesItem";
 // @ts-ignore
-import * as styles from "./Design.module.scss";
+import styles from "./Design.module.scss";
 
 const Design = () => {
   const { branding, mobileAppsDesign, uxUiDesign, websitesDesign } =

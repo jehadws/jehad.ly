@@ -6,7 +6,7 @@ import { MenuContext } from "../../contexts";
 import { useHeaderAssets } from "../../hooks/queries";
 import Menu from "./components/Menu";
 
-import * as styles from "./Header.module.scss";
+import styles from "./Header.module.scss";
 
 import { ReactSVG } from "react-svg";
 
@@ -30,7 +30,7 @@ const Header = ({
   const barStyles = classNames(styles.bar, "pageWrapper");
   const headerStyles = classNames(styles.container, {
     [styles.isWhite]: headerIsWhite && !isOpened,
-    [styles.gradientIsRemoved]: withoutGradient,
+    [styles['gradient-is-removed']]: withoutGradient,
     [styles.isShow]: headerShow,
   });
 

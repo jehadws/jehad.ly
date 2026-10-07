@@ -2,7 +2,7 @@ import React from "react";
 
 import { usePortfolioClientsAssets } from "@hooks/queries";
 // @ts-ignore
-import * as styles from "./Clients.module.scss";
+import styles from "./Clients.module.scss";
 
 type item = {
   publicURL: string;

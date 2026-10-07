@@ -7,7 +7,7 @@ import Flow from "./components/Flow";
 import Industries from "./components/Industries";
 import Technologies from "./components/Technologies";
 // @ts-ignore
-import * as styles from "./ServicesPage.module.scss";
+import styles from "./ServicesPage.module.scss";
 
 const ServicesPage = () => {
   return (

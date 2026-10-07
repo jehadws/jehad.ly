@@ -4,7 +4,7 @@ import React, { Fragment } from "react";
 import List from "./components/List";
 import Others from "./components/Others";
 // @ts-ignore
-import * as styles from "./Projects.module.scss";
+import styles from "./Projects.module.scss";
 import { useProjectsAssets } from "@hooks/queries";
 
 type props = {

@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 // @ts-ignore
-import * as styles from "./List.module.scss";
+import styles from "./List.module.scss";
 
 const List = ({ items }) => {
   return (

@@ -5,7 +5,7 @@ import Previews from "./components/Previews";
 import GradientText from "../../components/GradientText";
 
 // @ts-ignore
-import * as styles from "./BlogPage.module.scss";
+import styles from "./BlogPage.module.scss";
 import axiosClient from "../../../axiosClient";
 
 type Props = {

@@ -2,7 +2,7 @@ import React from 'react';
 
 import PageMessage from '@components/PageMessage';
 // @ts-ignore
-import * as styles from './ErrorPage.module.scss';
+import styles from './ErrorPage.module.scss';
 
 const ErrorPage = () => {
   const title = 'Oops';

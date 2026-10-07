@@ -1,7 +1,7 @@
 import React, { SVGProps, useEffect } from "react";
 import classNames from "classnames";
 //@ts-ignore
-import * as styles from "./Folder.module.scss";
+import styles from "./Folder.module.scss";
 import { useHomeHeroAssets } from "@hooks/queries";
 import { GatsbyImage } from "gatsby-plugin-image";
 import { Link } from "gatsby";

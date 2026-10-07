@@ -4,7 +4,7 @@ import Img from "gatsby-image";
 import PropTypes from "prop-types";
 
 // @ts-ignore
-import * as styles from "./PostThumbnail.module.scss";
+import styles from "./PostThumbnail.module.scss";
 import { Post } from "@scenes/BlogPage/components/Previews/Previews";
 
 const PostThumbnail = ({ title, slug, image, category }: Post) => {

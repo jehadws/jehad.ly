@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 // @ts-ignore
-import * as styles from "./Slider.module.scss";
+import styles from "./Slider.module.scss";
 import Item from "./components";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore from "swiper";

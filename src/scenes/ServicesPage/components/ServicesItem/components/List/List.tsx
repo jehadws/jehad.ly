@@ -7,7 +7,7 @@ import Item from "./components/Item";
 // import { BREAKPOINTS } from "@constants";
 
 // @ts-ignore
-import * as styles from "./List.module.scss";
+import styles from "./List.module.scss";
 import useBreakPoints from "@hooks/useBreakPoints";
 
 const List = ({ items }) => {

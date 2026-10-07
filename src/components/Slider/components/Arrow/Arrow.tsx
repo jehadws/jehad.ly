@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 // @ts-ignore
-import * as styles from "./Arrow.module.scss";
+import styles from "./Arrow.module.scss";
 
 const Arrow = ({ onClick, children, direction }) => {
   const directionStyles =

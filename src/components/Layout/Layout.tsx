@@ -6,7 +6,7 @@ import { MenuContext, HeaderGradientContext } from "../../contexts";
 import Header from "../Header";
 // import Footer from "@components/Footer";
 
-import * as styles from "./Layout.module.scss";
+import styles from "./Layout.module.scss";
 import "../../styles/index.scss";
 import Footer from "@components/Footer";
 import { useSiteMetadata } from "@hooks/queries";

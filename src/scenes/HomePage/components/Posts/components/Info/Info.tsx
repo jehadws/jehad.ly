@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "gatsby";
 import SlideHover from "@components/SlideHover";
 // @ts-ignore
-import * as styles from "./Info.module.scss";
+import styles from "./Info.module.scss";
 
 const Info = () => {
   return (

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import * as styles from './Partners.module.scss';
+import styles from './Partners.module.scss';
 
 const Partners = ({ items, reversed }) => {
   return (

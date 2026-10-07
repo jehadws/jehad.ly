@@ -4,7 +4,7 @@ import Description from "./components/Description";
 import Form from "./components/Form";
 
 // @ts-ignore
-import * as styles from "./ContactsPage.module.scss";
+import styles from "./ContactsPage.module.scss";
 
 const ContactsPage = () => {
   return (

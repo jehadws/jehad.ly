@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
 // @ts-ignore
-import * as styles from './Switcher.module.scss';
+import styles from './Switcher.module.scss';
 
 const Switcher = ({ items }) => {
   return (

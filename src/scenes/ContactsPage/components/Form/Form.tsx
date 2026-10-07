@@ -3,7 +3,7 @@ import { navigate } from "gatsby";
 import { isValidEmail } from "@helpers/index";
 
 // @ts-ignore
-import * as styles from "./Form.module.scss";
+import styles from "./Form.module.scss";
 import axios from "axios";
 import axiosClient from "../../../../../axiosClient";
 

@@ -4,7 +4,7 @@ import { useHomeGalleryAssets } from "../../../../hooks/queries";
 import ScrollGallery from "../../../../components/ScrollGallery/ScrollGallery";
 
 // @ts-ignore
-import * as styles from "./Gallery.module.scss";
+import styles from "./Gallery.module.scss";
 import { GatsbyImage } from "gatsby-plugin-image";
 
 const Gallery = () => {

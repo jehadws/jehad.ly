@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useContext } from "react";
 import { useSiteMetadata } from "@hooks/queries";
 // @ts-ignore
-import * as styles from "./MailUs.module.scss";
+import styles from "./MailUs.module.scss";
 import { HeaderGradientContext } from "@contexts/index";
 import classNames from "classnames";
 

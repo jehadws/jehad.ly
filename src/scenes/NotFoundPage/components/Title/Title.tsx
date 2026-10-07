@@ -3,7 +3,7 @@ import { Link } from "gatsby";
 import SlideHover from "@components/SlideHover";
 import image from "./images/man-image.gif";
 
-import * as styles from "./Title.module.scss";
+import styles from "./Title.module.scss";
 
 const Title = () => {
   return (

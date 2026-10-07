@@ -3,7 +3,7 @@ import React from 'react';
 import { useServicesIndustriesAssets } from '@hooks/queries';
 
 // @ts-ignore
-import * as styles from './List.module.scss';
+import styles from './List.module.scss';
 
 const List = () => {
   const {

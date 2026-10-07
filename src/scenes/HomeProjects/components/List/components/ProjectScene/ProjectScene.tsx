@@ -3,7 +3,7 @@ import Img from "gatsby-image";
 import PropTypes from "prop-types";
 
 // @ts-ignore
-import * as styles from "./ProjectScene.module.scss";
+import styles from "./ProjectScene.module.scss";
 import { StaticImage } from "gatsby-plugin-image";
 // import { StaticImage } from "gatsby-plugin-image";
 import SlideHover from "@components/SlideHover";

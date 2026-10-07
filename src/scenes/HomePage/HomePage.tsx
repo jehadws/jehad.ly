@@ -6,7 +6,7 @@ import Works from "./components/Works";
 import { SpringValue } from "react-spring";
 import "swiper/css";
 // @ts-ignore
-import * as styles from "./HomePage.module.scss";
+import styles from "./HomePage.module.scss";
 import WhatWeDo from "./components/WhatWeDo";
 import Hero from "./components/Hero";
 import Posts from "./components/Posts";

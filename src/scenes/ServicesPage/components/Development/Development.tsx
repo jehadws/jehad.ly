@@ -3,7 +3,7 @@ import React from "react";
 import { useServicesDevelopmentAssets } from "@hooks/queries";
 import ServicesItem from "../ServicesItem";
 // @ts-ignore
-import * as styles from "./Development.module.scss";
+import styles from "./Development.module.scss";
 
 const Development = () => {
   const {

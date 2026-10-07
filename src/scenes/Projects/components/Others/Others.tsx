@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "gatsby";
 
 // @ts-ignore
-import * as styles from "./Others.module.scss";
+import styles from "./Others.module.scss";
 // @ts-ignore
 import Corel from "../../../../assets/images/brands/corel.inline.svg";
 // @ts-ignore

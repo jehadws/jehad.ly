@@ -6,7 +6,7 @@ import List from "./components/List";
 // import { BREAKPOINTS } from '@constants';
 
 // @ts-ignore
-import * as styles from "./Flow.module.scss";
+import styles from "./Flow.module.scss";
 import useBreakPoints from "@hooks/useBreakPoints";
 
 const Flow = () => {

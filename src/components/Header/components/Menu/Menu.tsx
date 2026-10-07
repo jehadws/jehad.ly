@@ -3,7 +3,7 @@ import { Link } from "gatsby";
 
 import { useMenuAssets } from "../../../../hooks/queries";
 
-import * as styles from "./Menu.module.scss";
+import styles from "./Menu.module.scss";
 
 const Menu = () => {
   const {

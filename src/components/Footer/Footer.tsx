@@ -1,6 +1,6 @@
 import React from 'react';
 
-import * as styles from './Footer.module.scss';
+import styles from './Footer.module.scss';
 import Dribbble from '../../assets/images/brands/dribbble.inline.svg';
 import Instagram from '../../assets/images/brands/instagram.inline.svg';
 import Behance from '../../assets/images/brands/behance.inline.svg';

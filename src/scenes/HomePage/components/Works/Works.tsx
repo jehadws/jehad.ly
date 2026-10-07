@@ -3,7 +3,7 @@ import { useHomeWorksAssets, usePortfolioWorksAssets } from "../../../../hooks/q
 import Title from "./components/Title";
 import ScrollGallery from '../../../../components/ScrollGallery/ScrollGallery';
 // @ts-ignore
-import * as styles from "./Works.module.scss";
+import styles from "./Works.module.scss";
 import Item from "./components/Item";
 
 const Works = () => {

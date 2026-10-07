@@ -5,7 +5,7 @@ import classNames from "classnames";
 
 import PostThumbnail from "@scenes/PostThumbnail";
 // @ts-ignore
-import * as styles from "./Switcher.module.scss";
+import styles from "./Switcher.module.scss";
 import { Link } from "gatsby";
 import { Props } from "../../Previews";
 import { Post } from "@types/Post";

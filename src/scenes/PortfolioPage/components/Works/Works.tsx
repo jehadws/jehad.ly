@@ -4,7 +4,7 @@ import { usePortfolioWorksAssets } from "@hooks/queries";
 import Title from "./components/Title";
 import List from "./components/List";
 // @ts-ignore
-import * as styles from "./Works.module.scss";
+import styles from "./Works.module.scss";
 
 const Works = () => {
   // const data = useDribbbleShots();

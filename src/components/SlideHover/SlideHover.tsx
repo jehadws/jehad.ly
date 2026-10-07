@@ -1,7 +1,7 @@
 import React from "react";
 
 // @ts-ignore
-import * as styles from "./SlideHover.module.scss";
+import styles from "./SlideHover.module.scss";
 
 type SlideHoverProps = {
   children: React.ReactNode;

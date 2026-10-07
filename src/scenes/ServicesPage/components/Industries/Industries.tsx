@@ -4,7 +4,7 @@ import Description from './components/Description';
 import List from './components/List';
 
 // @ts-ignore
-import * as styles from './Industries.module.scss';
+import styles from './Industries.module.scss';
 
 const Industries = () => {
   return (

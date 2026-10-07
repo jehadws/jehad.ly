@@ -4,7 +4,7 @@ import Item from "./components/Item";
 import { useTestimonialsAssets } from "../../../../hooks/queries";
 import classnames from "classnames";
 // @ts-ignore
-import * as s from "./Testimonials.module.scss";
+import s from "./Testimonials.module.scss";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore from "swiper";
 import { Navigation } from "swiper/modules";

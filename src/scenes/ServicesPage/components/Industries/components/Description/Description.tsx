@@ -1,7 +1,7 @@
 import React from "react";
 
 // @ts-ignore
-import * as styles from "./Description.module.scss";
+import styles from "./Description.module.scss";
 
 const Description = () => {
   return (

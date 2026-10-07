@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 
 import { useSiteMetadata } from "@hooks/queries";
 // @ts-ignore
-import * as styles from "./PageMessage.module.scss";
+import styles from "./PageMessage.module.scss";
 
 const PageMessage = ({ title, large, mail, message }) => {
   const metadata = useSiteMetadata();

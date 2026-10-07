@@ -4,7 +4,7 @@ import Info from './components/Info';
 import Previews from './components/Previews';
 
 // @ts-ignore
-import * as styles from './Posts.module.scss';
+import styles from './Posts.module.scss';
 
 const Posts = () => {
   return (

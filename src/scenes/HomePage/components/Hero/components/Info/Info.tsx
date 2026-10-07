@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import PropTypes from "prop-types";
 
-import * as styles from "./Info.module.scss";
+import styles from "./Info.module.scss";
 
 const Info = ({ clutchLaurel, dribbbleLaurel, upworkLaurel }) => {
   const items = [

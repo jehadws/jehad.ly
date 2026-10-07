@@ -1,7 +1,7 @@
 import React from "react";
 
 //@ts-ignore
-import * as styles from "./Video.module.scss";
+import styles from "./Video.module.scss";
 import { useHomeHeroAssets } from "@hooks/queries";
 
 const Video = () => {

@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 import ProjectScene from "./components/ProjectScene";
 // @ts-ignore
-import * as styles from "./List.module.scss";
+import styles from "./List.module.scss";
 
 type props = {
   preview1: any;

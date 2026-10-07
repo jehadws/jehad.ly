@@ -1,7 +1,7 @@
 
-@import '@styles/variables/all';
-@import '@styles/mixins/all';
-@import '@functions/functions';
+@import 'variables/all';
+@import 'mixins/all';
+@import 'functions';
 
 .container {
   @include hl-padding(top, 210px);

@@ -1,6 +1,6 @@
 import React from "react";
 // @ts-ignore
-import * as styles from "./Item.module.scss";
+import styles from "./Item.module.scss";
 type props = {
   author: string;
   companyLogo: {

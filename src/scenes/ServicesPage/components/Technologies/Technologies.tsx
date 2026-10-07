@@ -6,7 +6,7 @@ import { useServicesTechnologiesAssets } from "@hooks/queries";
 import Switcher from "./components/Switcher";
 import List from "./components/List";
 // @ts-ignore
-import * as styles from "./Technologies.module.scss";
+import styles from "./Technologies.module.scss";
 import useBreakPoints from "@hooks/useBreakPoints";
 
 const Technologies = () => {
