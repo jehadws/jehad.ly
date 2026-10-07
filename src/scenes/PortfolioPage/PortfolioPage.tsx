@@ -1,7 +1,6 @@
 import React from 'react';
 
 import Projects from '@scenes/Projects';
-// import MailUs from '@scenes/MailUs';
 import Clients from './components/Clients';
 import Works from './components/Works';
 // @ts-ignore
@@ -15,7 +14,6 @@ const PortfolioPage = () => {
         <Clients />
         {/* <Works /> */}
       </div>
-      {/* <MailUs /> */}
     </div>
   );
 };

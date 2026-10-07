@@ -1,6 +1,5 @@
 import React from "react";
 
-// import MailUs from "@scenes/MailUs";
 import Design from "./components/Design";
 import Development from "./components/Development";
 import Flow from "./components/Flow";
@@ -19,7 +18,6 @@ const ServicesPage = () => {
         <Industries />
         <Technologies />
       </div>
-      {/* <MailUs /> */}
     </div>
   );
 };
