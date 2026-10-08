@@ -1,10 +1,14 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 // @ts-ignore
 import styles from './Title.module.scss';
 
-const Title = ({ icon, signature }) => {
+type Props = {
+  icon: { src?: string };
+  signature: { src?: string };
+};
+
+const Title = ({ icon, signature }: Props) => {
   return (
     <h2 className={styles.container}>
       Design that inspires
@@ -29,11 +33,6 @@ const Title = ({ icon, signature }) => {
       </a>
     </h2>
   );
-};
-
-Title.propTypes = {
-  icon: PropTypes.object,
-  signature: PropTypes.object,
 };
 
 export default Title;

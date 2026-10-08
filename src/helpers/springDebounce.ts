@@ -1,10 +1,10 @@
 function springDebounce(func: { apply: (arg0: any, arg1: IArguments) => void; }, wait = 1, immediate = false) {
-  let timeout: string | number | Timeout | undefined;
-  return function() {
+  let timeout: ReturnType<typeof setTimeout> | undefined;
+  return function (this: unknown) {
     const context = this;
     const args = arguments;
     const later = function() {
-      timeout = null;
+      timeout = undefined;
       if (!immediate) func.apply(context, args);
     };
     const callNow = immediate && !timeout;

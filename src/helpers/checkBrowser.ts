@@ -1,15 +1,24 @@
+type SafariWindow = Window & {
+  HTMLElement: { toString(): string };
+  safari?: { pushNotification?: unknown };
+};
+
 const checkBrowser = () => {
-  let isSafari = null;
+  let isSafari: boolean | null = null;
 
   if (typeof window !== `undefined`) {
+    const safariWindow = window as SafariWindow;
+
     isSafari =
-      /constructor/i.test(window.HTMLElement) ||
-      (function(p) {
-        return p.toString() === '[object SafariRemoteNotification]';
+      /constructor/i.test(safariWindow.HTMLElement.toString()) ||
+      (function (p: unknown) {
+        return (
+          Object.prototype.toString.call(p) === '[object SafariRemoteNotification]'
+        );
       })(
-        !window['safari'] ||
-          (typeof window['safari'] !== 'undefined' &&
-            window['safari'].pushNotification)
+        !safariWindow.safari ||
+          (typeof safariWindow.safari !== 'undefined' &&
+            safariWindow.safari.pushNotification)
       );
   }
 

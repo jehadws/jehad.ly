@@ -1,9 +1,21 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
 // @ts-ignore
 import styles from './List.module.scss';
 
-const List = ({ icon, items }) => {
+type Item = {
+  url: string;
+  title: string;
+  localCover?: {
+    publicURL?: string;
+  };
+};
+
+type Props = {
+  icon: { src?: string };
+  items: Item[];
+};
+
+const List = ({ icon, items }: Props) => {
   const STEP_VALUE = 8;
   const [numberOfRendered, setNumberOfRendered] = useState(STEP_VALUE);
   const handleSetNumberOfRendered = () => {

@@ -1,9 +1,18 @@
 import React, { Fragment } from "react";
-import PropTypes from "prop-types";
 
 import styles from "./Info.module.scss";
 
-const Info = ({ clutchLaurel, dribbbleLaurel, upworkLaurel }) => {
+type Laurel = {
+  src?: string;
+};
+
+type Props = {
+  clutchLaurel?: Laurel;
+  dribbbleLaurel?: Laurel;
+  upworkLaurel?: Laurel;
+};
+
+const Info = ({ clutchLaurel, dribbbleLaurel, upworkLaurel }: Props) => {
   const items = [
     {
       icon: upworkLaurel,
@@ -37,12 +46,6 @@ const Info = ({ clutchLaurel, dribbbleLaurel, upworkLaurel }) => {
       })}
     </>
   );
-};
-
-Info.propTypes = {
-  clutchLaurel: PropTypes.object,
-  dribbbleLaurel: PropTypes.object,
-  upworkLaurel: PropTypes.object,
 };
 
 export default Info;

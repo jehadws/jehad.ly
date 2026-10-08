@@ -1,9 +1,26 @@
 import React from "react";
-import PropTypes from "prop-types";
 // @ts-ignore
 import styles from "./List.module.scss";
 
-const List = ({ items }) => {
+type Image = {
+  src: string;
+};
+
+type TechnologyItem = {
+  title: string;
+  image: Image;
+};
+
+type GroupItem = {
+  title: string;
+  items: TechnologyItem[];
+};
+
+type Props = {
+  items?: GroupItem[];
+};
+
+const List = ({ items = [] }: Props) => {
   return (
     <ul className={styles.container}>
       {items.map(({ title, items }, index) => {
@@ -31,14 +48,6 @@ const List = ({ items }) => {
       })}
     </ul>
   );
-};
-
-List.defaultProps = {
-  items: [],
-};
-
-List.propTypes = {
-  items: PropTypes.arrayOf(PropTypes.object),
 };
 
 export default List;

@@ -1,9 +1,18 @@
 import React from "react";
-import PropTypes from "prop-types";
 // @ts-ignore
 import styles from "./Item.module.scss";
 
-const Item = ({ title, text, image }) => {
+type Image = {
+  src: string;
+};
+
+type Props = {
+  title: string;
+  text: string;
+  image: Image;
+};
+
+const Item = ({ title, text, image }: Props) => {
   return (
     <div className={styles.container}>
       <img src={image.src} alt="services item icon" loading="lazy" />
@@ -11,12 +20,6 @@ const Item = ({ title, text, image }) => {
       <p>{text}</p>
     </div>
   );
-};
-
-Item.propTypes = {
-  title: PropTypes.string,
-  text: PropTypes.string,
-  image: PropTypes.object,
 };
 
 export default Item;

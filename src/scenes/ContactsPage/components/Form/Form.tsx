@@ -9,10 +9,22 @@ import styles from "./Form.module.scss";
 import axios from "axios";
 import axiosClient from "../../../../../axiosClient";
 
+type FieldState = {
+  value: string;
+  valid: boolean | string;
+};
+
+type DataState = {
+  name: FieldState;
+  company: FieldState;
+  email: FieldState;
+  message: FieldState;
+};
+
 const Form = () => {
   const router = useRouter();
-  const attachmentInput = useRef(null);
-  const [data, setData] = useState({
+  const attachmentInput = useRef<HTMLInputElement>(null);
+  const [data, setData] = useState<DataState>({
     name: {
       value: "",
       valid: false,
@@ -31,7 +43,9 @@ const Form = () => {
     },
   });
 
-  const handleChange = ({ target: { name, value } }) => {
+  const handleChange = ({
+    target: { name, value },
+  }: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setData((data) => ({
       ...data,
       [name]: {
@@ -41,13 +55,13 @@ const Form = () => {
     }));
   };
 
-  const [isValid, setIsValid] = useState(true);
-  const [filesList, setFilesList] = useState([]);
+  const [isValid, setIsValid] = useState<boolean | string>(true);
+  const [filesList, setFilesList] = useState<File[]>([]);
 
   const fileAccept =
     ".png,.jpg,.pdf,.doc,.docx,.xml,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document";
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     const valid =
@@ -61,7 +75,7 @@ const Form = () => {
     formData.append("company", data.company.value);
     formData.append("email", data.email.value);
     formData.append("message", data.message.value);
-    formData.append("file", attachmentInput.current.files[0] || "");
+    formData.append("file", attachmentInput.current?.files?.[0] || "");
 
     valid &&
       axiosClient
@@ -80,8 +94,8 @@ const Form = () => {
         });
   };
 
-  const handleInputFileChange = async (e) => {
-    const mergedFilesList = [...e.target.files];
+  const handleInputFileChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const mergedFilesList = [...(e.target.files || [])];
     setFilesList(mergedFilesList);
   };
 

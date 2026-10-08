@@ -1,16 +1,29 @@
 import React from "react";
-import PropTypes from "prop-types";
 // import useBreakpoints from 'use-breakpoints-width';
 
 import Slider from "@components/Slider";
 import Item from "./components/Item";
-// import { BREAKPOINTS } from "@constants";
+// import { BREAKPOINTS } from '@constants';
 
 // @ts-ignore
 import styles from "./List.module.scss";
 import useBreakPoints from "@hooks/useBreakPoints";
 
-const List = ({ items }) => {
+type Image = {
+  src: string;
+};
+
+export type ListItem = {
+  title: string;
+  text: string;
+  image: Image;
+};
+
+type Props = {
+  items: ListItem[];
+};
+
+const List = ({ items }: Props) => {
   const { isTablet, isDesktop } = useBreakPoints();
 
   const settings = {
@@ -45,10 +58,6 @@ const List = ({ items }) => {
       )}
     </div>
   );
-};
-
-List.propTypes = {
-  items: PropTypes.arrayOf(PropTypes.object),
 };
 
 export default List;

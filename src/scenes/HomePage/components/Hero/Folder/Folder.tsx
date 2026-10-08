@@ -38,32 +38,46 @@ const Folder = () => {
   const { hero_01, hero_02, hero_03, hero_04, hero_05 } = homeHeroImages;
   const [activeIndex, setActiveIndex] = React.useState(0);
   const [isDone, setIsDone] = React.useState(false);
+  const [isVisible, setIsVisible] = React.useState(true);
+  const [animationKey, setAnimationKey] = React.useState(0);
 
   const IMAGES = [hero_01, hero_02, hero_03, hero_04, hero_05];
-  useEffect(() => {
-    const intervalA = setInterval(() => {
-      setActiveIndex((prevIndex) => (prevIndex + 1) % words.length);
-    }, 2000);
-    const intervalB = setInterval(() => {
-      setIsDone((prev) => !prev);
-    }, 1000);
+  const activeWord = words[activeIndex];
+  const activeImage = IMAGES[activeIndex];
 
-    return () => {
-      clearInterval(intervalA);
-      clearInterval(intervalB);
+  useEffect(() => {
+    const handleVisibilityChange = () => {
+      const visible = document.visibilityState === "visible";
+      setIsVisible(visible);
+
+      if (visible) {
+        setIsDone(false);
+        setAnimationKey((key) => key + 1);
+      }
     };
+
+    document.addEventListener("visibilitychange", handleVisibilityChange);
+    return () => document.removeEventListener("visibilitychange", handleVisibilityChange);
   }, []);
 
   useEffect(() => {
-    // Reset animation on component render
-    const elements = document.getElementsByClassName(styles.char);
-    for (let i = 0; i < elements.length; i++) {
-      elements[i].classList.remove(styles.active);
-      elements[i].classList.remove(styles.done);
-      void (elements[i] as HTMLElement).offsetWidth; // Trigger reflow to restart the animation
-      elements[i].classList.add(styles.active);
+    if (!isVisible) {
+      return;
     }
-  }, [activeIndex]);
+
+    const timer = window.setTimeout(() => {
+      if (isDone) {
+        setActiveIndex((index) => (index + 1) % words.length);
+        setIsDone(false);
+        setAnimationKey((key) => key + 1);
+        return;
+      }
+
+      setIsDone(true);
+    }, 1000);
+
+    return () => window.clearTimeout(timer);
+  }, [isDone, isVisible]);
 
   return (
     <div className={styles.folderContainer}>
@@ -74,29 +88,23 @@ const Folder = () => {
             <br />
             <div className={styles.wordsWrapper}>
               <span className={styles.words}>
-                {words.map((word, i) => {
-                  const isWordActive = i === activeIndex;
-                  const isWordDone = isWordActive && isDone;
-                  const wordStyles = classNames(styles.word, {
-                    [styles.wordActive]: isWordActive,
-                    [styles.wordDone]: isWordDone,
-                  });
-                  const charStyles = classNames(styles.char, {
-                    [styles.active]: isWordActive,
-                    [styles.done]: isWordDone,
-                  });
-                  return (
-                    <strong key={i} className={wordStyles}>
-                      {word.char.map((char, i) => {
-                        return (
-                          <span key={char + i} className={charStyles}>
-                            {char}
-                          </span>
-                        );
+                <strong
+                  key={`${activeIndex}-${animationKey}`}
+                  className={classNames(styles.word, styles.wordActive, {
+                    [styles.wordDone]: isDone,
+                  })}
+                >
+                  {activeWord.char.map((char, index) => (
+                    <span
+                      key={`${char}-${index}`}
+                      className={classNames(styles.char, styles.active, {
+                        [styles.done]: isDone,
                       })}
-                    </strong>
-                  );
-                })}
+                    >
+                      {char}
+                    </span>
+                  ))}
+                </strong>
                 &nbsp;
               </span>
               <span className={styles.thing}>THING</span>
@@ -104,29 +112,24 @@ const Folder = () => {
           </h1>
           <div className={styles.imageContainer}>
             <div className={styles.imageWrapper}>
-              {IMAGES.map((img, i) => {
-                const isImageActive = i === activeIndex;
-                const isImageDone = isImageActive && isDone;
-                const imageStyles = classNames(styles.img, {
-                  [styles.imgActive]: isImageActive,
-                  [styles.imgDone]: isImageDone,
-                });
-                return (
-                  <div key={i} className={imageStyles}>
-                    <Image
-                      src={img}
-                      alt="hero"
-                      preload={i === 0}
-                      placeholder="blur"
-                      style={{
-                        width: "100%",
-                        height: "auto",
-                        display: "block",
-                      }}
-                    />
-                  </div>
-                );
-              })}
+              <div
+                key={`${activeIndex}-${animationKey}`}
+                className={classNames(styles.img, styles.imgActive, {
+                  [styles.imgDone]: isDone,
+                })}
+              >
+                <Image
+                  src={activeImage}
+                  alt="hero"
+                  preload={activeIndex === 0}
+                  placeholder="blur"
+                  style={{
+                    width: "100%",
+                    height: "auto",
+                    display: "block",
+                  }}
+                />
+              </div>
             </div>
           </div>
           <div className={styles.line} />

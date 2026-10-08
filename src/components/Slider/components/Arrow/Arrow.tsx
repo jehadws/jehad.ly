@@ -1,9 +1,14 @@
 import React from "react";
-import PropTypes from "prop-types";
 // @ts-ignore
 import styles from "./Arrow.module.scss";
 
-const Arrow = ({ onClick, children, direction }) => {
+type Props = {
+  onClick?: () => void;
+  children?: React.ReactNode;
+  direction?: string;
+};
+
+const Arrow = ({ onClick, children, direction }: Props) => {
   const directionStyles =
     direction && direction === "next" ? styles.next : styles.previous;
 
@@ -16,12 +21,6 @@ const Arrow = ({ onClick, children, direction }) => {
       <span className={styles.titleHidden}>Arrow</span>
     </button>
   );
-};
-
-Arrow.propTypes = {
-  direction: PropTypes.string,
-  children: PropTypes.node,
-  onClick: PropTypes.func,
 };
 
 export default Arrow;

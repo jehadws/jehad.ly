@@ -1,10 +1,17 @@
 import React from "react";
-import PropTypes from "prop-types";
-
 // @ts-ignore
 import styles from "./List.module.scss";
 
-const List = ({ items }) => {
+type FlowItem = {
+  title: string;
+  message: string;
+};
+
+type Props = {
+  items?: FlowItem[];
+};
+
+const List = ({ items = [] }: Props) => {
   return (
     <ul className={styles.container}>
       {items.map(({ title, message }, index) => {
@@ -20,14 +27,6 @@ const List = ({ items }) => {
       })}
     </ul>
   );
-};
-
-List.defaultProps = {
-  items: [],
-};
-
-List.propTypes = {
-  items: PropTypes.arrayOf(PropTypes.object),
 };
 
 export default List;

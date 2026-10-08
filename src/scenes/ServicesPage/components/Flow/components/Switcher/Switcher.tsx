@@ -1,11 +1,19 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
 // @ts-ignore
 import styles from './Switcher.module.scss';
 
-const Switcher = ({ items }) => {
+type FlowItem = {
+  title: string;
+  message: string;
+};
+
+type Props = {
+  items?: FlowItem[];
+};
+
+const Switcher = ({ items = [] }: Props) => {
   return (
     <Tabs>
       <TabList className={styles.tabList}>
@@ -32,14 +40,6 @@ const Switcher = ({ items }) => {
       })}
     </Tabs>
   );
-};
-
-Switcher.defaultProps = {
-  items: [],
-};
-
-Switcher.propTypes = {
-  items: PropTypes.arrayOf(PropTypes.object),
 };
 
 export default Switcher;

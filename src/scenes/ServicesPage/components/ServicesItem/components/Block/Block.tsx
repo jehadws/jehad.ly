@@ -1,11 +1,19 @@
 import React from "react";
-import PropTypes from "prop-types";
 
 import siteMetadata from "@constants/siteMetadata";
 // @ts-ignore
 import styles from "./Block.module.scss";
 
-const Block = ({ message }) => {
+type Message = {
+  text: string;
+  link: string;
+};
+
+type Props = {
+  message: Message;
+};
+
+const Block = ({ message }: Props) => {
   const metadata = siteMetadata;
 
   return (
@@ -18,11 +26,6 @@ const Block = ({ message }) => {
       </div>
     </div>
   );
-};
-
-Block.propTypes = {
-  banner: PropTypes.bool,
-  message: PropTypes.object,
 };
 
 export default Block;

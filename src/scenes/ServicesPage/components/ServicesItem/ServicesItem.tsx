@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 
 import Block from "./components/Block";
 import List from "./components/List";
@@ -7,18 +6,25 @@ import List from "./components/List";
 // @ts-ignore
 import styles from "./ServicesItem.module.scss";
 
-const ServicesItem = ({ items, message }) => {
+import type { ListItem } from "./components/List/List";
+
+type Message = {
+  text: string;
+  link: string;
+};
+
+type Props = {
+  items: ListItem[];
+  message: Message;
+};
+
+const ServicesItem = ({ items, message }: Props) => {
   return (
     <div className={styles.container}>
       <Block message={message} />
       <List items={items} />
     </div>
   );
-};
-
-ServicesItem.propTypes = {
-  items: PropTypes.arrayOf(PropTypes.object),
-  message: PropTypes.object,
 };
 
 export default ServicesItem;
