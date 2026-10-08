@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import { navigate } from "gatsby";
+import { useRouter } from "next/navigation";
 import { isValidEmail } from "@helpers/index";
 
 // @ts-ignore
@@ -8,6 +8,7 @@ import axios from "axios";
 import axiosClient from "../../../../../axiosClient";
 
 const Form = () => {
+  const router = useRouter();
   const attachmentInput = useRef(null);
   const [data, setData] = useState({
     name: {
@@ -67,13 +68,13 @@ const Form = () => {
         })
         .then((response) => {
           if (response.status === 200) {
-            navigate("/thanks");
+            router.push("/thanks/");
           } else {
-            navigate("/error");
+            router.push("/error/");
           }
         })
         .catch(() => {
-          navigate("/error");
+          router.push("/error/");
         });
   };
 

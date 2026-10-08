@@ -4,7 +4,7 @@ import classNames from "classnames";
 import styles from "./Folder.module.scss";
 import { useHomeHeroAssets } from "@hooks/queries";
 import { GatsbyImage } from "gatsby-plugin-image";
-import { Link } from "gatsby";
+import Link from "next/link";
 const words = [
   {
     text: "smart", // buzel
@@ -131,7 +131,7 @@ const Folder = () => {
                   OF DESIGN-DRIVEN <br /> PRODUCT DEVELOPMENT
                 </span>
               </div>
-              <Link to="/contacts" className={styles.button}>
+              <Link href="/contacts" className={styles.button}>
                 <LightingIcon
                   className={classNames(styles.lightingLeft, styles.lighting)}
                 />

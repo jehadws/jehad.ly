@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "gatsby";
+import Link from "next/link";
 type Props = {
   title: string;
   subTitle: string;
@@ -13,7 +13,7 @@ const Heading = ({ title, subTitle }: Props) => {
       <h1 className={styles.title}>{title}</h1>
       <div className={styles.info}>
         <span className={styles.text}>{subTitle}</span>
-        <Link to={"/portfolio"} className={styles.button}>
+        <Link href={"/portfolio"} className={styles.button}>
           <span>show more</span>
         </Link>
       </div>

@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "gatsby";
+import Link from "next/link";
 
 import styles from "./Others.module.scss";
 import Corel from "@assets/icons/CorelInline";
@@ -114,7 +114,7 @@ const Others = () => {
           </div>
         </li>
         <li>
-          <Link to="/contacts" className={styles.link}>
+          <Link href="/contacts" className={styles.link}>
             <span className={styles.linkText}>
               Want
               <br />
