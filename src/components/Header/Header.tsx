@@ -1,18 +1,18 @@
-import React, { RefObject, useContext } from "react";
-import { Link } from "gatsby";
-import classNames from "classnames";
+'use client';
 
-import { MenuContext } from "../../contexts";
-import { useHeaderAssets } from "../../hooks/queries";
-import Menu from "./components/Menu";
+import React, { RefObject, useContext } from 'react';
+import Link from 'next/link';
+import classNames from 'classnames';
 
-import styles from "./Header.module.scss";
+import { MenuContext } from '@contexts/index';
+import { headerImages } from '@constants/images/headerImages';
+import Menu from './components/Menu';
 
-import { ReactSVG } from "react-svg";
+import styles from './Header.module.scss';
 
 type HeaderProps = {
   headerIsWhite: boolean;
-  forwardedRef: RefObject<HTMLDivElement>;
+  forwardedRef: RefObject<HTMLDivElement | null>;
   withoutGradient: boolean;
   headerShow: boolean;
 };
@@ -23,11 +23,10 @@ const Header = ({
   withoutGradient,
   headerShow,
 }: HeaderProps) => {
-  const { logotype } = useHeaderAssets();
   const { isOpened, handleTogglingIsOpened } = useContext(MenuContext);
 
-  const menuStatus = isOpened ? "opened" : "closed";
-  const barStyles = classNames(styles.bar, "pageWrapper");
+  const menuStatus = isOpened ? 'opened' : 'closed';
+  const barStyles = classNames(styles.bar, 'pageWrapper');
   const headerStyles = classNames(styles.container, {
     [styles.isWhite]: headerIsWhite && !isOpened,
     [styles['gradient-is-removed']]: withoutGradient,
@@ -38,15 +37,19 @@ const Header = ({
     <div className={headerStyles} ref={forwardedRef}>
       <div className={barStyles}>
         <div className={styles.logotype}>
-          <Link to="/" id="logoHomePage" title={"JS Station logo"}>
-            <ReactSVG src={logotype.src} title={"JS Station logo"} />
+          <Link href="/" id="logoHomePage" title="JS Station logo">
+            <img
+              src={headerImages.logotype.src}
+              alt="JS Station logo"
+              height={60}
+            />
           </Link>
         </div>
 
         <ul className={styles.navItems}>
           <li>
             <Link
-              to="/services/"
+              href="/services/"
               className={styles.contact}
               data-status={menuStatus}
             >
@@ -55,7 +58,7 @@ const Header = ({
           </li>
           <li>
             <Link
-              to="/portfolio/"
+              href="/portfolio/"
               className={styles.contact}
               data-status={menuStatus}
             >
@@ -63,9 +66,8 @@ const Header = ({
             </Link>
           </li>
           <li>
-            {" "}
             <Link
-              to="/contacts/"
+              href="/contacts/"
               className={styles.contact}
               data-status={menuStatus}
             >

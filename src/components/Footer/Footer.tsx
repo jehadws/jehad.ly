@@ -1,11 +1,12 @@
 import React from 'react';
 
+import Dribbble from '@assets/icons/DribbbleInline';
+import Instagram from '@assets/icons/InstagramInline';
+import Behance from '@assets/icons/BehanceInline';
+import Github from '@assets/icons/GithubInline';
+import NPM from '@assets/icons/NpmInline';
+
 import styles from './Footer.module.scss';
-import Dribbble from '../../assets/images/brands/dribbble.inline.svg';
-import Instagram from '../../assets/images/brands/instagram.inline.svg';
-import Behance from '../../assets/images/brands/behance.inline.svg';
-import Github from '../../assets/images/brands/github.inline.svg';
-import NPM from '../../assets/images/brands/npm.inline.svg';
 
 const Footer = () => {
   return (

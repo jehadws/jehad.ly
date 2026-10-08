@@ -1,8 +1,15 @@
 import React from "react";
 
-const MenuContext = React.createContext({
+export type MenuContextType = {
+  isOpened: boolean;
+  setIsOpened?: (isOpened: boolean) => void;
+  handleTogglingIsOpened?: () => void;
+};
+
+const MenuContext = React.createContext<MenuContextType>({
   isOpened: false,
   setIsOpened: () => {},
+  handleTogglingIsOpened: () => {},
 });
 
 export default MenuContext;

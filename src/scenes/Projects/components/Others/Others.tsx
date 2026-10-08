@@ -1,18 +1,12 @@
 import React from "react";
 import { Link } from "gatsby";
 
-// @ts-ignore
 import styles from "./Others.module.scss";
-// @ts-ignore
-import Corel from "../../../../assets/images/brands/corel.inline.svg";
-// @ts-ignore
-import Mobalytics from "../../../../assets/images/brands/mobalytics.inline.svg";
-// @ts-ignore
-import Udemy from "../../../../assets/images/brands/udemy-new.inline.svg";
-// @ts-ignore
-import Auth from "../../../../assets/images/brands/auth0.inline.svg";
-// @ts-ignore
-import Jbl from "../../../../assets/images/brands/jbl.inline.svg";
+import Corel from "@assets/icons/CorelInline";
+import Mobalytics from "@assets/icons/MobalyticsInline";
+import Udemy from "@assets/icons/UdemyNewInline";
+import Auth from "@assets/icons/Auth0Inline";
+import Jbl from "@assets/icons/JblInline";
 
 const Others = () => {
   return (

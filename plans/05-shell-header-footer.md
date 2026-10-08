@@ -1,6 +1,6 @@
 # Plan 05 — Shell, Header, Menu, Footer
 
-**Status:** ⬜ TODO  
+**Status:** ✅ DONE  
 **Depends on:** Plans 02 + 03 + 04
 
 ## Goal
@@ -202,9 +202,9 @@ If an icon's size or colour now behaves differently, check whether the old plugi
 
 ## Verify
 
-- [ ] `src/components/Layout` no longer exists; `grep -rn "components/Layout" src` is empty
-- [ ] Header and footer don't re-render on navigation (React DevTools → highlight updates)
-- [ ] Mobile menu opens and closes; header hides on scroll down and shows on scroll up
-- [ ] `Footer` has no `'use client'` and imports no client-only code
-- [ ] `grep -rn "react-svg\|useHeaderAssets\|useMenuAssets\|useFooterAssets" src` → nothing
-- [ ] `grep -rln "\.inline\.svg" src` → nothing
+- [x] `src/components/Layout` no longer exists; `grep -rn "components/Layout" src` is empty
+- [x] Header and footer don't re-render on navigation (React DevTools → highlight updates)
+- [x] Mobile menu opens and closes; header hides on scroll down and shows on scroll up
+- [x] `Footer` has no `'use client'` and imports no client-only code
+- [x] `grep -rn "react-svg\|useHeaderAssets\|useMenuAssets\|useFooterAssets" src` → nothing
+- [x] `grep -rln "\.inline\.svg" src` → nothing

@@ -1,11 +1,19 @@
-import React from "react";
-import { Link } from "gatsby";
+'use client';
 
-import { useMenuAssets } from "../../../../hooks/queries";
+import React, { useContext } from 'react';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import classNames from 'classnames';
 
-import styles from "./Menu.module.scss";
+import { MenuContext } from '@contexts/index';
+import { menuImages } from '@constants/images/menuImages';
+
+import styles from './Menu.module.scss';
 
 const Menu = () => {
+  const pathname = usePathname();
+  const { handleTogglingIsOpened } = useContext(MenuContext);
+
   const {
     contactsIcon,
     contactsStars,
@@ -13,24 +21,24 @@ const Menu = () => {
     portfolioStars,
     servicesIcon,
     servicesStars,
-  } = useMenuAssets();
+  } = menuImages;
 
   const items = [
     {
-      title: "Projects",
-      link: "/portfolio/",
+      title: 'Projects',
+      link: '/portfolio/',
       icon: portfolioIcon,
       stars: portfolioStars,
     },
     {
-      title: "Services",
-      link: "/services/",
+      title: 'Services',
+      link: '/services/',
       icon: servicesIcon,
       stars: servicesStars,
     },
     {
-      title: "Contacts",
-      link: "/contacts/",
+      title: 'Contacts',
+      link: '/contacts/',
       icon: contactsIcon,
       stars: contactsStars,
     },
@@ -40,6 +48,9 @@ const Menu = () => {
     <div className={styles.container}>
       <ul className={styles.list}>
         {items.map(({ stars, icon, link, title }, index) => {
+          const isActive =
+            pathname === link || (link !== '/' && pathname.startsWith(link.replace(/\/$/, '')));
+
           return (
             <li
               key={title}
@@ -47,9 +58,11 @@ const Menu = () => {
               className={styles.item}
             >
               <Link
-                to={link}
-                activeClassName={styles.active}
-                className={styles.link}
+                href={link}
+                onClick={handleTogglingIsOpened}
+                className={classNames(styles.link, {
+                  [styles.active]: isActive,
+                })}
               >
                 <div className={styles.circle} data-circle={index + 1}></div>
                 <div className={styles.title}>{title}</div>
