@@ -1,14 +1,12 @@
 import React from "react";
 
-import { usePortfolioWorksAssets } from "@hooks/queries";
+import { portfolioWorksImages } from "@constants/images/portfolioWorksImages";
 import Title from "./components/Title";
-import List from "./components/List";
 // @ts-ignore
 import styles from "./Works.module.scss";
 
 const Works = () => {
-  // const data = useDribbbleShots();
-  const { arrowDown, dribbbleRed, textCircled } = usePortfolioWorksAssets();
+  const { dribbbleRed, textCircled } = portfolioWorksImages;
 
   return (
     <div className={styles.container}>

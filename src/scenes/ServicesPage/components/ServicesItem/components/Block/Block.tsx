@@ -1,12 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import { useSiteMetadata } from "@hooks/queries";
+import siteMetadata from "@constants/siteMetadata";
 // @ts-ignore
 import styles from "./Block.module.scss";
 
 const Block = ({ message }) => {
-  const metadata = useSiteMetadata();
+  const metadata = siteMetadata;
 
   return (
     <div className={styles.container}>

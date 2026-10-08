@@ -1,5 +1,6 @@
 import React from "react";
-import { useHomeWorksAssets, usePortfolioWorksAssets } from "../../../../hooks/queries";
+import { homeWorksImages } from "@constants/images/homeWorksImages";
+import { portfolioWorksImages } from "@constants/images/portfolioWorksImages";
 import Title from "./components/Title";
 import ScrollGallery from '../../../../components/ScrollGallery/ScrollGallery';
 // @ts-ignore
@@ -7,7 +8,7 @@ import styles from "./Works.module.scss";
 import Item from "./components/Item";
 
 const Works = () => {
-  const { dribbbleRed, textCircled } = usePortfolioWorksAssets();
+  const { dribbbleRed, textCircled } = portfolioWorksImages;
   const {
     Art,
     eScooter,
@@ -21,7 +22,7 @@ const Works = () => {
     Tude,
     Realty,
     North,
-  } = useHomeWorksAssets();
+  } = homeWorksImages;
   const imageList = [
     [Web],
     [Investments, Travel, Starbank],
@@ -36,7 +37,7 @@ const Works = () => {
       <Title icon={dribbbleRed} signature={textCircled} />
       <ScrollGallery step={5}>
         {imageList.map((item) => {
-          return <Item images={item} key={item[0].name} />;
+          return <Item images={item} key={item[0].src} />;
         })}
       </ScrollGallery>
     </div>

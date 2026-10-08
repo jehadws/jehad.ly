@@ -1,12 +1,14 @@
+'use client';
+
 import React, { useRef } from "react";
 // @ts-ignore
 import styles from "./Slider.module.scss";
 import Item from "./components";
-import { Swiper, SwiperSlide } from "swiper/react";
+import { Swiper, SwiperSlide, type SwiperRef } from "swiper/react";
 import SwiperCore from "swiper";
 
 import { Navigation } from "swiper/modules";
-import { useProjectsAssets } from "@hooks/queries";
+import { projectsImages } from "@constants/images/projectsImages";
 
 SwiperCore.use([Navigation]);
 const Slider = () => {
@@ -26,8 +28,8 @@ const Slider = () => {
     strapi,
     threejs,
     vue,
-  } = useProjectsAssets();
-  const swiperRef = useRef(null);
+  } = projectsImages;
+  const swiperRef = useRef<SwiperRef>(null);
   const items = [
     {
       id: 0,
@@ -109,7 +111,7 @@ const Slider = () => {
   ];
   const sliderParams = {
     spaceBetween: 16,
-    slidesPerView: "auto",
+    slidesPerView: "auto" as const,
     centeredSlides: true,
 
     loop: true,

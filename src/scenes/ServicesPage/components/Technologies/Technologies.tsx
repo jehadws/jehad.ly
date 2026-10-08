@@ -1,8 +1,10 @@
+'use client';
+
 import React from "react";
 // import useBreakpoints from 'use-breakpoints-width';
 
 // import { BREAKPOINTS } from '@constants';
-import { useServicesTechnologiesAssets } from "@hooks/queries";
+import { servicesTechnologiesImages } from "@constants/images/servicesTechnologiesImages";
 import Switcher from "./components/Switcher";
 import List from "./components/List";
 // @ts-ignore
@@ -33,7 +35,7 @@ const Technologies = () => {
     typescript,
     vue,
     wordpress,
-  } = useServicesTechnologiesAssets();
+  } = servicesTechnologiesImages;
 
   const items = [
     {

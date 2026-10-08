@@ -1,15 +1,12 @@
 import React, { useEffect, useState } from "react";
+import type { StaticImageData } from "next/image";
 import PropTypes from "prop-types";
 // @ts-ignore
 import styles from "./Title.module.scss";
 
 type Props = {
-  icon: {
-    publicURL: string;
-  };
-  signature: {
-    publicURL: string;
-  };
+  icon: StaticImageData;
+  signature: StaticImageData;
 };
 
 const Title = ({ icon, signature }: Props) => {

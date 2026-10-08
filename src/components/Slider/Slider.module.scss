@@ -9,7 +9,7 @@
   @include hl-margin(top, 50px);
   padding: 0;
 
-  [class='slick-active'] button {
+  .active {
     background: $white-color;
   }
 

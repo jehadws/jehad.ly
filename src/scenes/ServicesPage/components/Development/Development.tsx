@@ -1,6 +1,6 @@
 import React from "react";
 
-import { useServicesDevelopmentAssets } from "@hooks/queries";
+import { servicesDevelopmentImages } from "@constants/images/servicesDevelopmentImages";
 import ServicesItem from "../ServicesItem";
 // @ts-ignore
 import styles from "./Development.module.scss";
@@ -11,7 +11,7 @@ const Development = () => {
     projectManagement,
     qualityAssurance,
     webDevelopment,
-  } = useServicesDevelopmentAssets();
+  } = servicesDevelopmentImages;
 
   const message = {
     text: "Front-end & back-end expertise from development to delivery.",

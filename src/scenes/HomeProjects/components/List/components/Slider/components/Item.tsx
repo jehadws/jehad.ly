@@ -1,14 +1,14 @@
 import React from "react";
+import Image, { type StaticImageData } from "next/image";
 // @ts-ignore
 import styles from "./Item.module.scss";
 import SlideHover from "@components/SlideHover";
-import { GatsbyImage } from "gatsby-plugin-image";
 type Techs = { name: string; icon: any };
 
 type Props = {
   link: string;
   linkTitle: string;
-  preview: any;
+  preview: StaticImageData;
   tags: string;
   title: string;
   alt: string;
@@ -67,12 +67,24 @@ const Item = ({
             className={`${styles.preview}`}
           >
             <a href={link} target="_blank" rel="noopener noreferrer">
-              <GatsbyImage
-              image={preview.childImageSharp.gatsbyImageData}
-                draggable={false}
-                alt={alt}
-                title={imgTitle}
-              />
+              <div
+                style={{
+                  position: "relative",
+                  overflow: "hidden",
+                  aspectRatio: "41 / 30",
+                }}
+              >
+                <Image
+                  src={preview}
+                  alt={alt}
+                  title={imgTitle}
+                  draggable={false}
+                  fill
+                  placeholder="blur"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  style={{ objectFit: "cover" }}
+                />
+              </div>
               <span className={styles.hiddenTitle}>{title}</span>
             </a>
           </div>

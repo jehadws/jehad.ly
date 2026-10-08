@@ -155,10 +155,8 @@
     }
   }
 
-  :global {
-    .swiper {
-      overflow: initial;
-    }
+  :global(.swiper) {
+    overflow: initial;
   }
 }
 

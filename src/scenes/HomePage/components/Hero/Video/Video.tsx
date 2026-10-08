@@ -2,10 +2,10 @@ import React from "react";
 
 //@ts-ignore
 import styles from "./Video.module.scss";
-import { useHomeHeroAssets } from "@hooks/queries";
+import { homeHeroImages } from "@constants/images/homeHeroImages";
 
 const Video = () => {
-  const { video } = useHomeHeroAssets();
+  const { video } = homeHeroImages;
   return (
     <div className={styles.folderContainer}>
       <div className={styles.folderWrapper}>

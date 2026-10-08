@@ -1,17 +1,15 @@
 import React, { Fragment } from "react";
-import Img from "gatsby-image";
+import Image, { type StaticImageData } from "next/image";
 import PropTypes from "prop-types";
 
 // @ts-ignore
 import styles from "./ProjectScene.module.scss";
-import { StaticImage } from "gatsby-plugin-image";
-// import { StaticImage } from "gatsby-plugin-image";
 import SlideHover from "@components/SlideHover";
 
 type props = {
   link: string;
   linkTitle: string;
-  preview: any;
+  preview: StaticImageData;
   tags: string;
   title: string;
   alt: string;
@@ -38,12 +36,24 @@ const ProjectScene = ({
     <Fragment>
       <div className={`${styles.preview} ${reversed ? styles.reversed : ""}`}>
         <a href={link} target="_blank" rel="noopener noreferrer">
-          <Img
-            fluid={preview.childImageSharp.fluid}
-            draggable={false}
-            alt={alt}
-            title={imgTitle}
-          />
+          <div
+            style={{
+              position: "relative",
+              overflow: "hidden",
+              aspectRatio: "41 / 30",
+            }}
+          >
+            <Image
+              src={preview}
+              alt={alt}
+              title={imgTitle}
+              draggable={false}
+              fill
+              placeholder="blur"
+              sizes="(max-width: 768px) 100vw, 66vw"
+              style={{ objectFit: "cover" }}
+            />
+          </div>
           <span className={styles.hiddenTitle}>{title}</span>
         </a>
       </div>

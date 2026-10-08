@@ -1,11 +1,10 @@
 import React, { Fragment } from "react";
 
-// import { useProjectsAssets } from "../../hooks/queries";
+import { projectsImages } from "@constants/images/projectsImages";
 import List from "./components/List";
 import Others from "./components/Others";
 // @ts-ignore
 import styles from "./Projects.module.scss";
-import { useProjectsAssets } from "@hooks/queries";
 
 type props = {
   title: string;
@@ -13,7 +12,7 @@ type props = {
 };
 
 const Projects = ({ title, navigation }: props) => {
-  const { ...listAssets } = useProjectsAssets();
+  const listAssets = projectsImages;
 
   return (
     <Fragment>

@@ -1,6 +1,6 @@
 import React from "react";
 
-import { usePortfolioClientsAssets } from "@hooks/queries";
+import { portfolioClientsImages } from "@constants/images/portfolioClientsImages";
 // @ts-ignore
 import styles from "./Clients.module.scss";
 
@@ -9,7 +9,7 @@ type item = {
 };
 
 const Clients = () => {
-  const items = usePortfolioClientsAssets();
+  const items = portfolioClientsImages;
 
   return (
     <div className={styles.container}>

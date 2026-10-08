@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { useServicesIndustriesAssets } from '@hooks/queries';
+import { servicesIndustriesImages } from '@constants/images/servicesIndustriesImages';
 
 // @ts-ignore
 import styles from './List.module.scss';
@@ -11,7 +11,7 @@ const List = () => {
     fintech,
     healthCare,
     internetOfThings,
-  } = useServicesIndustriesAssets();
+  } = servicesIndustriesImages;
 
   const items = [
     {

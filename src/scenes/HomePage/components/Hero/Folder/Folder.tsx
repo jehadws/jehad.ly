@@ -2,8 +2,8 @@ import React, { SVGProps, useEffect } from "react";
 import classNames from "classnames";
 //@ts-ignore
 import styles from "./Folder.module.scss";
-import { useHomeHeroAssets } from "@hooks/queries";
-import { GatsbyImage } from "gatsby-plugin-image";
+import { homeHeroImages } from "@constants/images/homeHeroImages";
+import Image from "next/image";
 import Link from "next/link";
 const words = [
   {
@@ -35,7 +35,7 @@ const words = [
 ];
 
 const Folder = () => {
-  const { hero_01, hero_02, hero_03, hero_04, hero_05 } = useHomeHeroAssets();
+  const { hero_01, hero_02, hero_03, hero_04, hero_05 } = homeHeroImages;
   const [activeIndex, setActiveIndex] = React.useState(0);
   const [isDone, setIsDone] = React.useState(false);
 
@@ -60,7 +60,7 @@ const Folder = () => {
     for (let i = 0; i < elements.length; i++) {
       elements[i].classList.remove(styles.active);
       elements[i].classList.remove(styles.done);
-      void elements[i].offsetWidth; // Trigger reflow to restart the animation
+      void (elements[i] as HTMLElement).offsetWidth; // Trigger reflow to restart the animation
       elements[i].classList.add(styles.active);
     }
   }, [activeIndex]);
@@ -112,12 +112,19 @@ const Folder = () => {
                   [styles.imgDone]: isImageDone,
                 });
                 return (
-                  <GatsbyImage
-                    key={i}
-                    className={imageStyles}
-                    image={img.childImageSharp.gatsbyImageData}
-                    alt="hero"
-                  />
+                  <div key={i} className={imageStyles}>
+                    <Image
+                      src={img}
+                      alt="hero"
+                      preload={i === 0}
+                      placeholder="blur"
+                      style={{
+                        width: "100%",
+                        height: "auto",
+                        display: "block",
+                      }}
+                    />
+                  </div>
                 );
               })}
             </div>

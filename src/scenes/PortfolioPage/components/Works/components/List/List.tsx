@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import Img from 'gatsby-image';
 // @ts-ignore
 import styles from './List.module.scss';
 
@@ -27,7 +26,11 @@ const List = ({ icon, items }) => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Img fluid={item?.localCover?.childImageSharp.fluid} />
+                <img
+                src={item?.localCover?.publicURL}
+                alt={item.title}
+                loading="lazy"
+              />
               </a>
             </li>
           ) : null;

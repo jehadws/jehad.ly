@@ -1,13 +1,13 @@
 import React from "react";
 
-import { useServicesDesignAssets } from "@hooks/queries";
+import { servicesDesignImages } from "@constants/images/servicesDesignImages";
 import ServicesItem from "../ServicesItem";
 // @ts-ignore
 import styles from "./Design.module.scss";
 
 const Design = () => {
   const { branding, mobileAppsDesign, uxUiDesign, websitesDesign } =
-    useServicesDesignAssets();
+    servicesDesignImages;
 
   const message = {
     text: "We make the collaboration of people and interface more intensive and exciting.",

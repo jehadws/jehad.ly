@@ -1,5 +1,5 @@
 import React from "react";
-import { useSiteMetadata } from "@hooks/queries";
+import siteMetadata from "@constants/siteMetadata";
 import GradientText from "@components/GradientText";
 import SlideHover from "@components/SlideHover";
 
@@ -7,7 +7,7 @@ import SlideHover from "@components/SlideHover";
 import styles from "./Description.module.scss";
 
 const Description = () => {
-  const data = useSiteMetadata();
+  const data = siteMetadata;
   return (
     <div className={styles.wrapper}>
       <div className={styles.title}>

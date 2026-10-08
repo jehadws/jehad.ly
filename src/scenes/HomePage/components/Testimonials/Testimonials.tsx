@@ -1,11 +1,11 @@
 import React, { useState, useEffect, useRef } from "react";
 
 import Item from "./components/Item";
-import { useTestimonialsAssets } from "../../../../hooks/queries";
+import { testimonialsImages } from "@constants/images/testimonialsImages";
 import classnames from "classnames";
 // @ts-ignore
 import s from "./Testimonials.module.scss";
-import { Swiper, SwiperSlide } from "swiper/react";
+import { Swiper, SwiperSlide, type SwiperRef } from "swiper/react";
 import SwiperCore from "swiper";
 import { Navigation } from "swiper/modules";
 
@@ -19,7 +19,7 @@ const Testimonials = () => {
     companyLogo4,
     companyLogo5,
     stars,
-  } = useTestimonialsAssets();
+  } = testimonialsImages;
 
   const items = [
     {
@@ -53,11 +53,11 @@ const Testimonials = () => {
       text: `JS Station works hard to produce good results at a reasonable price.`,
     },
   ];
-  const swiperRef = useRef(null);
+  const swiperRef = useRef<SwiperRef>(null);
 
   const sliderParams = {
     spaceBetween: 16,
-    slidesPerView: "auto",
+    slidesPerView: "auto" as const,
     centeredSlides: true,
 
     loop: true,
@@ -153,7 +153,6 @@ const Testimonials = () => {
                 // navigation
                 grabCursor
                 ref={swiperRef}
-                containerсlass={s.testimonialSliderContainer}
               >
                 {testimonialItems}
               </Swiper>
@@ -165,7 +164,7 @@ const Testimonials = () => {
   );
 };
 
-const SecondArrowIcon = ({ mod }) => {
+const SecondArrowIcon = ({ mod }: { mod: string }) => {
   return (
     <div className={classnames("icon", { [mod]: mod })}>
       <div></div>

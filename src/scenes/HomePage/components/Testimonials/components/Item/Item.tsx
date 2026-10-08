@@ -1,18 +1,13 @@
 import React from "react";
+import type { StaticImageData } from "next/image";
 // @ts-ignore
 import styles from "./Item.module.scss";
 type props = {
   author: string;
-  companyLogo: {
-    publicURL: string;
-  };
-  generalLogo: {
-    publicURL: string;
-  };
+  companyLogo: StaticImageData;
+  generalLogo: StaticImageData;
   rating: string;
-  stars: {
-    publicURL: string;
-  };
+  stars: StaticImageData;
   text: string;
 };
 

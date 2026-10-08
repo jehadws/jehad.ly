@@ -1,41 +1,60 @@
-import React from "react";
-import PropTypes from "prop-types";
-import Slick from "react-slick";
+'use client';
 
-import Arrow from "./components/Arrow";
+import React, { Children, type ReactNode } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
 
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 // @ts-ignore
 import styles from "./Slider.module.scss";
 
-const Slider = ({ children, settings, instance }) => {
-  const defaultSettings = {
-    prevArrow: <Arrow direction="previous" />,
-    nextArrow: <Arrow direction="next" />,
-    dotsClass: styles.dots,
-    customPaging: function customDot(i) {
-      return (
-        <button className={styles.button}>
-          <span className={styles.title}>{i}</span>
-        </button>
-      );
-    },
-    lazyLoad: true,
-    ...settings,
-  };
-
-  return (
-    <Slick {...defaultSettings} ref={instance}>
-      {children}
-    </Slick>
-  );
+type Settings = {
+  dots?: boolean;
+  infinite?: boolean;
+  speed?: number;
+  slidesToShow?: number;
+  slidesToScroll?: number;
 };
 
-Slider.propTypes = {
-  children: PropTypes.node.isRequired,
-  settings: PropTypes.object,
-  instance: PropTypes.any,
+type Props = {
+  children: ReactNode;
+  settings?: Settings;
+};
+
+const Slider = ({ children, settings = {} }: Props) => {
+  const {
+    dots = false,
+    infinite = false,
+    speed,
+    slidesToShow = 1,
+    slidesToScroll = 1,
+  } = settings;
+
+  return (
+    <Swiper
+      modules={[Pagination]}
+      slidesPerView={slidesToShow}
+      slidesPerGroup={slidesToScroll}
+      loop={infinite}
+      speed={speed}
+      pagination={
+        dots
+          ? {
+              el: `.${styles.dots}`,
+              clickable: true,
+              bulletClass: styles.button,
+              bulletActiveClass: styles.active,
+            }
+          : false
+      }
+    >
+      {Children.toArray(children).map((child, index) => (
+        <SwiperSlide key={index}>{child}</SwiperSlide>
+      ))}
+      {dots ? <div className={styles.dots} /> : null}
+    </Swiper>
+  );
 };
 
 export default Slider;

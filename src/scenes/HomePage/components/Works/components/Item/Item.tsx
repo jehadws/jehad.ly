@@ -1,28 +1,30 @@
 import React from "react";
+import Image, { type StaticImageData } from "next/image";
 // @ts-ignore
 import styles from "./Item.module.scss";
-import { GatsbyImage } from "gatsby-plugin-image";
 
 type props = {
-  images: {
-    childImageSharp: any;
-  }[];
+  images: StaticImageData[];
 };
 
 const Item = ({ images }: props) => {
   return (
     <div className={`${styles.item} swiper-slide`}>
-      {images.map(({ childImageSharp }, i) => {
+      {images.map((image, i) => {
         return (
-          <GatsbyImage
-            key={i}
-            className={styles.image}
-            image={childImageSharp.gatsbyImageData}
-            // fluid={childImageSharp.fluid}
-            draggable={false}
-            loading="lazy"
-            alt="dribbble portfolio pic"
-          />
+          <div key={i} className={styles.image}>
+            <Image
+              src={image}
+              alt="dribbble portfolio pic"
+              draggable={false}
+              placeholder="blur"
+              style={{
+                width: "100%",
+                height: "auto",
+                display: "block",
+              }}
+            />
+          </div>
         );
       })}
     </div>
