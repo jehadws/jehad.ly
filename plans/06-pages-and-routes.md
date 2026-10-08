@@ -1,6 +1,6 @@
 # Plan 06 — Pages and routes
 
-**Status:** ⬜ TODO  
+**Status:** ✅ DONE  
 **Depends on:** Plan 05
 
 ## Goal
@@ -216,3 +216,16 @@ In the template:
 - [ ] Titles: home has no doubled `| Jehad.Pro`; other pages read `Page | Jehad.Pro`
 - [ ] `app/(main)/error.tsx` returns no `<html>`; only `global-error.tsx` does
 - [ ] `grep -rn "<Layout\|return null" src/app` → nothing
+
+## Result notes (2026-10-08)
+
+All checks pass (checked against the running dev server). Deviations and findings:
+
+- **`portfolio/[slug]` lives in `(bare)`, not `(main)`** — the old Project template used `<Layout footerIsHide={true}>`, which Plan 05 maps to `(bare)`. Verified: slug pages have header, no footer.
+- **`/nonexistent/` 404 shows header + footer after hydration.** In dev the server ships the 404 as a bare `__next_error__` document whose RSC payload contains the full `(main)` tree (error stack names the `(main)/[...rest]` CatchAll); the browser renders the shell + NotFound scene on hydration. SSR `<head>` is correct (`noindex`, `Page not found | Jehad.Pro`).
+- **Metadata added to both `not-found.tsx` files** (`title: 'Page not found'`) — without it the 404 tab title leaked the home title. Next's automatic `noindex` confirmed on top.
+- **services/contacts descriptions** use the real copy from the old pages' `<Head>` (services: tools blurb; contacts: site description) instead of placeholders.
+- **Two scenes fixed early to unblock 404 verification** (Turbopack fails every route when one route-tree file breaks): `NotFoundPage/Title.tsx` (next/link + next/image) and `PageMessage.tsx` (siteMetadata constant instead of deleted `useSiteMetadata`, typed props instead of PropTypes — the propTypes made `large`/`mail` required and broke ThanksPage).
+- **Old Project JSON-LD dropped** — it referenced dead `/blog/` URLs and had a literal `{h1}` placeholder bug. Revisit in Plan 10 (SEO).
+- **`npx tsc --noEmit`: 139 errors (baseline 150)**; only new-file error is the deferred `animation` prop on `(main)/page.tsx` — the home page's react-spring mouse parallax moves into the HomePage scene in Plan 07.
+- Deleted `src/app/page.tsx` (Plan 02 placeholder, conflicted with `(main)/page.tsx`) and the orphaned `src/components/Head/`.
