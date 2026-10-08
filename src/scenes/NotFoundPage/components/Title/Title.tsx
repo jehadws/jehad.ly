@@ -1,5 +1,6 @@
 import React from "react";
-import { Link } from "gatsby";
+import Image from "next/image";
+import Link from "next/link";
 import SlideHover from "@components/SlideHover";
 import image from "./images/man-image.gif";
 
@@ -10,7 +11,7 @@ const Title = () => {
     <div className={styles.container}>
       <div className={styles.message}>
         <div className={styles.imageWrap}>
-          <img src={image} className={styles.image} alt="crying man" />
+          <Image src={image} className={styles.image} alt="crying man" />
         </div>
         <div className={styles.textWrap}>
           <p className={styles.text}>
@@ -18,7 +19,7 @@ const Title = () => {
           </p>
           <div className={styles.linkWrap}>
             <SlideHover>
-              <Link to="/" className={styles.link}>
+              <Link href="/" className={styles.link}>
                 okay, go on
               </Link>
             </SlideHover>

@@ -1,7 +1,6 @@
-import React, { Fragment } from "react";
-import { Link } from "gatsby";
-// @ts-ignore
-import * as styles from "./Categories.module.scss";
+import { Fragment } from 'react';
+import Link from 'next/link';
+import styles from './Categories.module.scss';
 
 type Props = {
   items: {
@@ -16,20 +15,20 @@ const Categories = ({ items }: Props) => {
   if (items && items.length < 1) return null;
 
   return (
-    <ul className={styles.categoryList}>
+    <ul className={styles['category-list']}>
       <li key="All projects">
-        <Link to="/portfolio" className={styles.categoryLink}>
+        <Link href="/portfolio/" className={styles['category-link']}>
           Portfolio
         </Link>
       </li>
       {items.map((item) => {
-        let link = `/portfolio?category=${item.slug}`;
+        const link = `/portfolio/?category=${item.slug}`;
 
         return (
           <Fragment key={item.slug}>
-            <li className={styles.categorySeparator}>/</li>
+            <li className={styles['category-separator']}>/</li>
             <li key={item.id}>
-              <Link to={link} className={styles.categoryLink}>
+              <Link href={link} className={styles['category-link']}>
                 {item.name}
               </Link>
             </li>

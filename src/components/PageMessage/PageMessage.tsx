@@ -1,13 +1,17 @@
 import React from "react";
-import { Link } from "gatsby";
-import PropTypes from "prop-types";
+import Link from "next/link";
 
-import { useSiteMetadata } from "@hooks/queries";
-// @ts-ignore
+import siteMetadata from "@constants/siteMetadata";
 import styles from "./PageMessage.module.scss";
 
-const PageMessage = ({ title, large, mail, message }) => {
-  const metadata = useSiteMetadata();
+type Props = {
+  title: string;
+  message: string;
+  large?: boolean;
+  mail?: boolean;
+};
+
+const PageMessage = ({ title, large, mail, message }: Props) => {
   const largeStyles = large ? styles.large : null;
 
   return (
@@ -18,24 +22,17 @@ const PageMessage = ({ title, large, mail, message }) => {
       {mail ? (
         <p className={styles.description}>
           If you have any additional questions, mail us:{" "}
-          <a className={styles.link} href={`mailto:${metadata.email}`}>
-            {metadata.email}
+          <a className={styles.link} href={`mailto:${siteMetadata.email}`}>
+            {siteMetadata.email}
           </a>
         </p>
       ) : null}
 
-      <Link className={styles.button} to="/portfolio">
+      <Link className={styles.button} href="/portfolio/">
         view projects
       </Link>
     </div>
   );
-};
-
-PageMessage.propTypes = {
-  large: PropTypes.bool,
-  mail: PropTypes.bool,
-  message: PropTypes.string,
-  title: PropTypes.string,
 };
 
 export default PageMessage;
