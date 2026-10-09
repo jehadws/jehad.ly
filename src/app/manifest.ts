@@ -4,7 +4,7 @@ import siteMetadata from '@constants/siteMetadata';
 export default function manifest(): MetadataRoute.Manifest {
   return {
     name: siteMetadata.title,
-    short_name: 'jehad.pro',
+    short_name: 'jehad.ly',
     description: siteMetadata.description,
     start_url: '/',
     scope: '/',

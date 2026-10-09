@@ -1,6 +1,6 @@
 import axios from "axios";
 const DevURL = "http://127.0.0.1:8000";
-const BASEURL = "https://api.jehad.pro";
+const BASEURL = "https://api.jehad.ly";
 
 // "@babel/core": "~7.20.0",
 const axiosClient = axios.create({
