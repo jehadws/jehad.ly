@@ -150,8 +150,6 @@ const Slider = () => {
       <SwiperSlide key={index}>
         <Item
           key={item.id}
-          // generalLogo={clutchLogo}
-          // stars={stars}
           {...item}
         />
       </SwiperSlide>
@@ -162,10 +160,8 @@ const Slider = () => {
         <Swiper
           modules={[Navigation]}
           {...sliderParams}
-          // navigation
           grabCursor
           ref={swiperRef}
-          // containerсlass={styles.testimonialSliderContainer}
         >
           {testimonialItems}
         </Swiper>

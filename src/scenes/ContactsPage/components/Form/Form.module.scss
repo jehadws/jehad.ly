@@ -75,7 +75,6 @@
   &:focus,
   &.focused {
     border-color: $main-color;
-    // background-color: $white-color;
   }
 
   @media screen and (max-width: $lg) {
@@ -106,13 +105,11 @@
   letter-spacing: 0.5px;
 
   &:focus {
-    // background-color: $white-color;
     border-color: $main-color;
   }
 
   &.focused {
     border-color: $main-color;
-    // background-color: $white-color;
   }
 
   @media screen and (max-width: $md) {
@@ -188,7 +185,6 @@
 
 .textarea:focus ~ .block,
 .textarea.focused ~ .block {
-  // background-color: $white-color;
   border-color: $main-color;
 }
 
@@ -221,7 +217,6 @@
 .textarea.focused + .placeholder {
   @include hl-font-size-text(14px);
   top: 28px;
-  // background-color: $white-color;
 
   @media screen and (max-width: $sm) {
     height: 20px;

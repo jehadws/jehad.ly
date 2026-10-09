@@ -22,12 +22,10 @@
     flex-direction: column-reverse;
     height: 100% !important;
   }
-  // background: red;
 }
 .info {
   width: 50%;
   max-width: 50%;
-  // padding-left: 2rem;
   @include media-breakpoint-down(sm) {
     width: 100%;
     max-width: 100%;

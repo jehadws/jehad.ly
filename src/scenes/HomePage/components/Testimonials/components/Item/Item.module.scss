@@ -24,19 +24,7 @@ div .testimonialItem {
     height: 400px;
   }
 
-  // &::after {
-  //   content: "";
-  //   position: absolute;
-  //   width: 1px;
-  //   height: 90%;
-  //   background-color: #32344d;
-  //   opacity: 0.5;
-  //   top: 5%;
-  //   left: hl-grid-multiplier(11);
-  // }
   @include media-breakpoint-down(md) {
-    // margin-left: 15px;
-    // margin-right: 15px;
     max-width: 100%;
   }
   @include media-breakpoint-down(sm) {
@@ -127,7 +115,6 @@ div .testimonialItem {
   }
 }
 .author {
-  // background: #000;
   display: flex;
   flex-direction: row;
   align-items: center;

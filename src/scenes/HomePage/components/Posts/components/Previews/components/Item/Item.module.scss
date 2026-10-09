@@ -39,7 +39,6 @@
     $main-color 28.53%,
     $main-color 93.53%
   );
-  // border: 1px solid #323453;
   border-radius: 10px;
   @media screen and (min-width: $md) {
     @include hl-width(180px);

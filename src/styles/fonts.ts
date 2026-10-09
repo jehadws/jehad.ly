@@ -1,11 +1,9 @@
 import localFont from 'next/font/local';
 
-// ⚠ No SofiaPro files found in src/assets/fonts.
-// Sofia Pro is loaded via Adobe Typekit in the Gatsby build.
-// Plan 09 decides whether to license it or replace it.
-// For now we set the CSS variable to an empty string so SCSS $font-sofia-pro
-// gracefully falls back to `sans-serif` (defined in variables/fonts.scss).
-// If you add woff2 files later, replace this stub with a real localFont() call.
+// ⚠ No Sofia Pro files exist in src/assets/fonts — Gatsby loaded it from Adobe Typekit.
+// The variable is left empty so SCSS $font-sofia-pro falls back to `sans-serif`
+// (see variables/fonts.scss). To ship it, add woff2 files and replace this stub
+// with a real localFont() call.
 export const sofiaPro = {
   variable: '--font-sofia-pro',
   className: '',

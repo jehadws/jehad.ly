@@ -90,27 +90,19 @@ $header-transition: all 0.3s;
   }
 
   .menuIcon {
-    // background-color: #02021e;
-
     &:before,
     &:after {
-      // background-color: #02021e;
     }
   }
 
   .logotype {
     path:nth-of-type(1),
     path:nth-of-type(3) {
-      // fill: #02021e;
     }
   }
 
   .contact {
-    // color: #02021e;
-    // border-color: rgba(2, 2, 30, 0.2);
-
     &:hover {
-      // color: #fff;
     }
   }
 }
@@ -131,7 +123,6 @@ $header-transition: all 0.3s;
 .logotype {
   position: relative;
   z-index: 50;
-  // margin-right: auto;
 
   a {
     display: block;
@@ -163,7 +154,6 @@ $header-transition: all 0.3s;
   color: $white-color;
   letter-spacing: 0.5px;
   box-sizing: border-box;
-  // font-size: 1.167rem;
   font-weight: 500;
   text-transform: uppercase;
   color: #fafafa;
@@ -179,7 +169,6 @@ $header-transition: all 0.3s;
 
   &:hover {
     color: $main-color;
-    // background-color: $main-color;
   }
 }
 

@@ -44,7 +44,6 @@ const Title = ({ icon, signature }: Props) => {
           src={icon.src}
           alt="dribbble logotype"
           loading="lazy"
-          // className={styles.svg}
           style={dribbleTextTransform}
         />
       </a>

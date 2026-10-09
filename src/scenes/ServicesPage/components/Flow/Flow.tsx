@@ -1,11 +1,9 @@
 'use client';
 
 import React from "react";
-// import useBreakpoints from 'use-breakpoints-width';
 
 import Switcher from "./components/Switcher";
 import List from "./components/List";
-// import { BREAKPOINTS } from '@constants';
 
 // @ts-ignore
 import styles from "./Flow.module.scss";

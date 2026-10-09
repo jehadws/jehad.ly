@@ -7,28 +7,28 @@ import Image from "next/image";
 import Link from "next/link";
 const words = [
   {
-    text: "smart", // buzel
+    text: "smart",
     color: "#FF0000",
     char: ["s", "m", "a", "r", "t"],
   },
   {
-    text: "big", // hourse
+    text: "big",
     color: "#00FFFF",
     char: ["b", "i", "g"],
   },
   {
-    text: "tech", // hourse
+    text: "tech",
     color: "#00FFFF",
     char: ["t", "e", "c", "h"],
   },
   {
-    text: "buzz", // fire
+    text: "buzz",
     color: "#FFFF00",
     char: ["b", "u", "z", "z"],
   },
 
   {
-    text: "COOL", // hand
+    text: "COOL",
     color: "#00FF00",
     char: ["c", "o", "o", "l"],
   },
@@ -162,7 +162,6 @@ const LightingIcon = (props: SVGProps<SVGSVGElement>) => {
   return (
     <svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" {...props}>
       <path
-        // fill="#000000"
         d="M215.79 118.17a8 8 0 0 0-5-5.66L153.18 90.9l14.66-73.33a8 8 0 0 0-13.69-7l-112 120a8 8 0 0 0 3 13l57.63 21.61l-14.62 73.25a8 8 0 0 0 13.69 7l112-120a8 8 0 0 0 1.94-7.26ZM109.37 214l10.47-52.38a8 8 0 0 0-5-9.06L62 132.71l84.62-90.66l-10.46 52.38a8 8 0 0 0 5 9.06l52.8 19.8Z"
       ></path>
     </svg>

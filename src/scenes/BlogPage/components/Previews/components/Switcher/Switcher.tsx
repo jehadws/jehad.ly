@@ -43,9 +43,6 @@ const Switcher = ({ items, page }: Props) => {
   const itemsDevelopment: Post[] = [];
   const itemsDesign: Post[] = [];
   const itemsInsights: Post[] = [];
-  // development
-  // design
-  // insights
   const allCategories = [
     { title: "الكل", link: "/blog", items },
     { title: "#تطوير", link: "/blog/development", items: itemsDevelopment },
@@ -97,7 +94,6 @@ const Switcher = ({ items, page }: Props) => {
         </TabList>
 
         {allCategories.map(({ title, items }) => {
-          // const newItems = items.slice(0, numberOfRendered);
           return (
             <TabPanel key={title} className={styles.tabsContentContainer}>
               <ul className={styles.tabContentList}>

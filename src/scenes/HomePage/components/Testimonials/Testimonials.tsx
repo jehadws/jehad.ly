@@ -125,7 +125,6 @@ const Testimonials = () => {
                 onClick={goPrev}
                 className={classnames(
                   s.testimonialNavigationButton
-                  // "swiper-button-prev"
                 )}
               >
                 <SecondArrowIcon mod="icon--navigate" />
@@ -138,7 +137,6 @@ const Testimonials = () => {
                   className={classnames(
                   s.testimonialNavigationButton,
                   s.testimonialNavigationButtonNext
-                  // "swiper-button-next"
                 )}
               >
                 <SecondArrowIcon mod="icon--navigate" />
@@ -150,7 +148,6 @@ const Testimonials = () => {
               <Swiper
                 modules={[Navigation]}
                 {...sliderParams}
-                // navigation
                 grabCursor
                 ref={swiperRef}
               >

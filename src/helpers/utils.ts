@@ -3,7 +3,6 @@ function isValidEmail(email: string) {
   return regexp.test(email);
 }
 
-// this function takes an element on at the time of finding which callback will be returned
 export function scrollHandler(
   ref: { getBoundingClientRect?: () => DOMRect } | null | undefined,
   callback: (arg0: boolean) => void

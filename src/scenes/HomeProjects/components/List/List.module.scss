@@ -10,7 +10,6 @@
   position: relative;
 }
 .gradient {
-  // position: absolute;
   width: 100vw;
   height: 100%;
   transform: translateX(-50%);
@@ -18,7 +17,6 @@
   top: 40px;
   border-radius: 60px;
   background: #02021e;
-  // border-bottom: solid 1px wheat;
   background: -webkit-linear-gradient(
     179deg,
     #02021e 0%,
