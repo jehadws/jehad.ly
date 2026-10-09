@@ -13,8 +13,8 @@ const NotFound = () => {
 };
 
 export const Head: HeadFC = () => {
-  const title = `404 Not found | Jehad.Pro`;
-  const description = `Jehad.Pro Team brings the design-driven development of your digital product to reality. We are working with a variety of projects, from the strict insurance website to a dynamic music application.`;
+  const title = `404 Not found | jehad.ly`;
+  const description = `jehad.ly Team brings the design-driven development of your digital product to reality. We are working with a variety of projects, from the strict insurance website to a dynamic music application.`;
 
   return <HeadPage title={title} description={description}></HeadPage>;
 };

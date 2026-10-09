@@ -1,13 +1,13 @@
 import type { GatsbyConfig } from "gatsby"
 const path = require(`path`)
-const siteUrl = process.env.URL || `https://jehad.pro`
+const siteUrl = process.env.URL || `https://jehad.ly`
 const config: GatsbyConfig = {
   siteMetadata: {
-    title: `Jehad.Pro`,
+    title: `jehad.ly`,
     description: `Experts from all your network providers integrated into one powerful platform.`,
     author: `@jehadabdulwafi`,
-    email: `hello@jehad.pro`,
-    siteUrl: `https://jehad.pro`,
+    email: `hello@jehad.ly`,
+    siteUrl: `https://jehad.ly`,
   },
   // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
   // If you use VSCode you can also use the GraphQL plugin
@@ -44,8 +44,8 @@ const config: GatsbyConfig = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Jehad.Pro`,
-        short_name: `jehad.pro`,
+        name: `jehad.ly`,
+        short_name: `jehad.ly`,
         start_url: `/`,
         background_color: `#02021e`,
         theme_color: `#02021e`,
@@ -78,14 +78,14 @@ const config: GatsbyConfig = {
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
-        host: 'https://jehad.pro',
+        host: 'https://jehad.ly',
         policy: [{ userAgent: '*', allow: ['/'] }]
       }
     },
     {
       resolve: `gatsby-plugin-canonical-urls`,
       options: {
-        siteUrl: `https://jehad.pro`,
+        siteUrl: `https://jehad.ly`,
       },
     },
     {

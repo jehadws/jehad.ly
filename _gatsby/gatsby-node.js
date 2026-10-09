@@ -1,6 +1,6 @@
 const axios = require(`axios`);
 const getAllPosts = async () => {
-  // const { data: places } = await axios.get(`https://api.jehad.pro/api/posts`);
+  // const { data: places } = await axios.get(`https://api.jehad.ly/api/posts`);
   return [];
 };
 const projects = require("./projects");

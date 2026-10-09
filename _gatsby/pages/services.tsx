@@ -16,7 +16,7 @@ const Services = () => {
 };
 
 export const Head: HeadFC = () => {
-  const title = "Services | Web Design and Development Services | Jehad.Pro";
+  const title = "Services | Web Design and Development Services | jehad.ly";
   const description = `We offer to get acquainted with tools that we use in our studio to create the wonders of the digital world.`;
 
   return <HeadPage title={title} description={description}></HeadPage>;

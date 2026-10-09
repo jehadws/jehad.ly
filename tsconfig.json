@@ -42,5 +42,5 @@
     ".next/dev/types/**/*.ts",
     "**/*.mts"
   ],
-  "exclude": ["node_modules", "_gatsby"]
+  "exclude": ["node_modules"]
 }

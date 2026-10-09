@@ -16,8 +16,8 @@ const Error = () => {
 };
 
 export const Head: HeadFC = () => {
-  const title = "Error | Jehad.Pro";
-  const description = `Jehad.Pro Team brings the design-driven development of your digital product to reality. We are working with a variety of projects, from the strict insurance website to a dynamic music application.`;
+  const title = "Error | jehad.ly";
+  const description = `jehad.ly Team brings the design-driven development of your digital product to reality. We are working with a variety of projects, from the strict insurance website to a dynamic music application.`;
 
   return <HeadPage title={title} description={description}></HeadPage>;
 };
