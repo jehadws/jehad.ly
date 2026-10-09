@@ -10,6 +10,7 @@ import styles from "./HomePage.module.scss";
 import WhatWeDo from "./components/WhatWeDo";
 import Hero from "./components/Hero";
 import Projects from "@scenes/HomeProjects";
+import MailUs from "../MailUs";
 
 const HomePage = () => {
   return (
