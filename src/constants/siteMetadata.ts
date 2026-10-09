@@ -6,7 +6,7 @@ const siteMetadata = {
     'Experts from all your network providers integrated into one powerful platform.',
   author: '@jehadabdulwafi',
   email: 'hello@jehad.pro',
-  siteUrl: process.env.NEXT_PUBLIC_SITE_URL ?? 'https://jehad.ly',
+  siteUrl: process.env.NEXT_PUBLIC_SITE_URL ?? 'https://jehad.pro',
   sameAs: ['https://github.com/jehadws'],
 };
 

@@ -15,6 +15,20 @@ export const metadata: Metadata = {
   description: siteMetadata.description,
   authors: [{ name: siteMetadata.author }],
   alternates: { canonical: './' }, // metadataBase alone does NOT emit canonical tags; this does, per route
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: '48x48' },
+      { url: '/favicon-16x16.png', type: 'image/png', sizes: '16x16' },
+      { url: '/favicon-32x32.png', type: 'image/png', sizes: '32x32' },
+    ],
+    apple: '/apple-touch-icon.png',
+  },
+  // iOS installs read these meta tags instead of manifest.ts
+  appleWebApp: {
+    capable: true,
+    title: siteMetadata.title,
+    statusBarStyle: 'black-translucent',
+  },
   openGraph: {
     title: siteMetadata.defaultTitle,
     description: siteMetadata.description,
@@ -25,7 +39,7 @@ export const metadata: Metadata = {
     images: [{ url: '/tile-512.png' }],
   },
   twitter: {
-    card: 'summary',
+    card: 'summary_large_image',
     title: siteMetadata.defaultTitle,
     description: siteMetadata.description,
     images: ['/tile-256.png'],
