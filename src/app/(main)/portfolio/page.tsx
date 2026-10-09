@@ -1,9 +1,10 @@
 import type { Metadata } from 'next';
 import PortfolioPage from '@scenes/PortfolioPage';
+import siteMetadata from '@constants/siteMetadata';
 
 export const metadata: Metadata = {
   title: 'Portfolio',
-  description: 'Selected projects.', // ⚠ real copy in Plan 09
+  description: siteMetadata.description,
 };
 
 export default function Portfolio() {
