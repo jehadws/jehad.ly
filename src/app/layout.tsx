@@ -62,6 +62,13 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             name: siteMetadata.title,
             url: siteMetadata.siteUrl,
             logo: `${siteMetadata.siteUrl}/logo.svg`,
+            email: siteMetadata.email,
+            contactPoint: {
+              "@type": "ContactPoint",
+              email: siteMetadata.email,
+              contactType: "sales",
+              availableLanguage: ["en"],
+            },
             sameAs: siteMetadata.sameAs,
           }}
         />
